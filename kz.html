@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aqbobek International School - первая международная частная школа в регионе. 
+        Уникальная школа, предоставляющая детям от 0 до 11 класса возможность получить качественное международное образование в Казахстане."/>
+        <title>Akbobek International School - школа больших возможностей</title>
+        <link rel="icon" type="image/png" href="images/title.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Preloader -->
+        <div class="preloader">
+          <div class="spinner"></div>
+          <div class="preloader-content">
+              <h2>Быть первым, иметь лучшее</h2>
+          </div>
+      </div> 
+    <section class="header">
+      <video autoplay muted loop id="backgroundVideo">
+        <source src="images/backgroundvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="images/logocolor.png" alt="Logo" class="logo">
+        </a>
+      </div>
+      <div class="phone">
+        <a href="tel:+77077506666" class="phone-link">
+          <i class="fa-solid fa-phone-flip"></i>
+            <span class="phone-number">+7 707 750 6666</span>
+        </a>
+    </div>
+      <div class="lang-dropdown">
+        <button class="lang-dropdown-btn">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span class="lang-name">ҚАЗ</span>
+          <i class="fa-solid fa-angle-down lang-arrow"></i>
+        </button>
+        <div class="lang-dropdown-list">
+          <a href="#" class="lang-dropdown-item">ҚАЗАҚША</a>
+          <a href="en.html" class="lang-dropdown-item">ENGLISH</a>
+          <a href="index.html" class="lang-dropdown-item">РУССКИЙ</a>
+        </div>
+      </div>
+    </section>
+      <button class="navbar-burger" onclick="toggleMenu()"></button>
+      <div class="menu">
+        <nav>
+          <div class="dropdown">
+            <button class="dropbtn" style="animation-delay: 0.1s">О нас <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dropdown-content">
+              <a href="sections/about.html">О AIS</a>
+              <a href="sections/staffmain.html">Наша команда</a>
+              <a href="#">О кампусе</a>
+              <a href="#">Внутренняя инфраструктура</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Анкета</a>
+              <a href="#">Гранты</a>
+              <a href="#">Стоимость обучения</a>
+              <a href="#">Подменю 4</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Подменю 1</a>
+              <a href="#">Подменю 2</a>
+              <a href="#">Подменю 3</a>
+              <a href="#">Подменю 4</a>
+            </div>
+          </div>
+          <a href="#" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
+          <a href="contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+          <div class="dropdown">
+            <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Правила школы</a>
+              <a href="#">Политика обработки личных данных</a>
+              <a href="#">Подменю 3</a>
+              <a href="#">Подменю 4</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <script type="text/javascript">
+        const toggleMenu = () => {
+         const body = document.body;
+         body.classList.toggle("open");
+ 
+         // Проверка, открыто ли меню
+         if (body.classList.contains("open")) {
+         // Заблокировать прокрутку страницы
+           body.style.overflow = "hidden";
+         } else {
+         // Разблокировать прокрутку страницы
+           body.style.overflow = "";
+   }
+ };
+      </script>
+<script>
+$(document).ready(function(){
+  $(".dropbtn").click(function(e){
+    e.stopPropagation(); // Остановить всплытие события
+    $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
+    $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
+    $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
+    $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+  });
+
+  // Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+  $(document).click(function(){
+    $(".dropdown-content").hide();
+    $(".dropbtn").css("opacity", "1");
+  });
+});
+  </script>
+            <div class="box-container">
+              <div class="box" id="firstbox">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Уникальное обучение</h3>
+                <p>Доступна сингапурская программа обучения и госстандарт</p>
+              </div>
+              <div class="box" id="secondbox">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Работа на результат</h3>
+                <p>Школа полного дня, только знания и развитие</p>
+              </div>
+              <div class="box" id="thirdbox">
+                <i class="fas fa-award"></i>
+                <h3>Разновидность кружков</h3>
+                <p>Все что нужно для спортивных достижений и здоровья</p>
+              </div>
+          </div>
+      </section>
+      <section class="home">
+      <div class="text-box">
+        <h1>HARMONY OF <span></span></h1>
+        <p>Уникальная программа обучения для вашего ребенка<br>Получите качественное международное образование уже сейчас.</p>
+        <a href="" class="hero-btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+      </div>
+  </section>
+<!-- Back to top button -->
+<a id="back-to-top"></a>
+<!--Courses-->
+<section class="courses">
+<section class="course">
+    <h2>Курсы</h2>
+    <p>Курсы которые мы предлагаем</p>
+    <div class="row">
+        <div class="course-col" id="firstcourse">
+            <div class="rowboxes">Intermediate</div>
+            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="course-col" id="secondcourse">
+            <div class="rowboxes">Degree</div>
+            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="course-col" id="thirdcourse">
+            <div class="rowboxes">Post Graduation</div>
+            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+<section class="news-container no-resize">
+  <a href="#" class="news-item">
+      <img src="news/news3.png" alt="News 1">
+      <div class="news-content">
+          <h3>Talanttar Alemi</h3>
+          <p class="news-date">20.12.23</p>
+      </div>
+  </a>
+
+  <a href="#" class="news-item">
+      <img src="news/news2.png" alt="News 2">
+      <div class="news-content">
+          <h3>Призеры международной олимпиады Owlympia</h3>
+          <p class="news-date">07.11.23</p>
+      </div>
+  </a>
+
+  <a href="#" class="news-item">
+      <img src="news/news1.png" alt="News 3">
+      <div class="news-content">
+          <h3>Учитель Года 2023</h3>
+          <p class="news-date">11.12.23</p>
+      </div>
+  </a>
+</section>
+<!---Pluses-->
+<br>
+<section class="pluses no-resize">
+    <h1>МИССИЯ ШКОЛЫ</h1>
+    <p>ГОТОВИТЬ ОТКРЫТЫХ К ИННОВАЦИЯМ, СОЦИАЛЬНО ОТВЕТСТВЕННЫХ ГРАЖДАН МИРА,<br>КОТОРЫЕ БУДУТ СЛУЖИТЬ ВО БЛАГО ОБЩЕСТВА.</p>
+  </section>
+  <div class="purple-line"></div>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <div class="carousel">
+        <img src="images/img-1.jpg" alt="img" draggable="false">
+        <img src="images/img-2.jpg" alt="img" draggable="false">
+        <img src="images/img-3.jpg" alt="img" draggable="false">
+        <img src="images/img-4.jpg" alt="img" draggable="false">
+        <img src="images/img-5.jpg" alt="img" draggable="false">
+        <img src="images/img-6.jpg" alt="img" draggable="false">
+        <img src="images/img-7.jpg" alt="img" draggable="false">
+        <img src="images/img-8.jpg" alt="img" draggable="false">
+        <img src="images/img-9.jpg" alt="img" draggable="false">
+      </div>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+<div class="accordion no-resize">
+    </div>
+    <div class="accordion-text">
+      <div class="title">Частые вопросы</div>
+      <div class="questions-container">
+        <div class="question">
+            <button>
+                <span>Как можно к вам поступить?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Всего присутствует 4 этапа приёма в школу, вся информация о поступлении доступна на сайте www.aqbobek.edu.kz в разделе "Поступление"</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>Как узнать контакты школы?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Связаться с нами можно на сайте www.aqbobek.edu.kz в разделе "Контакты"</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>Как зарегистрироваться на пробное тестирование?</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Вся информация по поводу пробного тестирования можно узнать на сайте www.aqbobek.edu.kz в разделе "Грант" или же на инстаграм-странице нашей школы</p>
+        </div>
+
+        <div class="question">
+            <button>
+                <span>Вопрос</span>
+                <i class="fas fa-chevron-down d-arrow"></i>
+            </button>
+            <p>Ответ</p>
+        </div>
+    </div>
+</section>
+<!--- campus -->
+<section class="campusbg">
+<section class="campus">
+  <h2>Кампус</h2>
+  <p>Внешний вид школы</p>
+
+  <div class="row">
+      <div class="campus-col" id="firstimg">
+          <img src="images/1.jpg">
+          <div class="layer">
+              <h4>ВХОД</h4>
+      </div>
+  </div>
+  <div class="campus-col" id="secondimg">
+      <img src="images/2.jpg">
+      <div class="layer">
+          <h4>ХОЛЛ</h4>
+      </div>
+  </div>
+  <div class="campus-col" id="thirdimg">
+      <img src="images/3.jpg">
+      <div class="layer">
+          <h4>ДВОР</h4>
+      </div>
+      </div>
+  </div>
+</section>
+</section>
+<section class="partners">
+  <h2>Наши Партнеры</h2>
+<br>
+<section class="slidebody">
+  <div class="logos">
+    <div class="logos-slide" id="carousel-container">
+      <img src="images/nis.png" alt="logo">
+      <img src="images/logo-zhu.png" alt="logo">
+      <img src="images/part.png" alt="logo">
+      <img src="images/logo-1.png" alt="logo">
+      <img src="images/logo-2.png" alt="logo">
+    </section>
+  </div>
+  </div>
+
+<!---- Enroll -->
+<section class="cta">
+  <h1>Получите качественное международное образование уже сейчас</h1>
+  <div class="background-img"></div>
+  <a href="" class="hero-btn">ПОСТУПИТЬ В ШКОЛУ</a>
+</section>
+<br>
+
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
+          <ion-icon name="logo-google"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menufoot">
+      <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+      <li class="menu__item"><a class="menu__link" href="sections/about.html">О нас</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Родителям</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Грант</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
+    </ul>
+    <p>&copy; 2024 Akbobek International School | Все права защищены</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="gallery.js" defer></script>
+<script src="assets/language.js" defer></script>
+    </body>
+</html>
