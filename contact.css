@@ -81,10 +81,12 @@ display: none;
 }
 }
 @media (max-width: 700px) {
-.logo {
-  max-width: 150px; /* Уменьшаем максимальную ширину для маленьких экранов */
-  z-index: 1500;
-}
+  .logo {
+    z-index: 1500;
+  }
+  .logo-container {
+    max-width: 135px;
+  }
 }
 .animated {
 opacity: 0;
@@ -157,10 +159,10 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 15%;
+height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87) 0%, rgba(0, 0, 0, 0) 100%);
 pointer-events: none; /* Позволяет кликать через этот элемент */
-z-index: 1;
+z-index: 1000;
 resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
 }
 @media (max-width: 768px) {
@@ -340,10 +342,10 @@ overflow: hidden;
 color: #fff;
 }
 .sub-header h1 {
-  font-size: 3vw;
+  font-size: 4vw;
   font-weight: 600;
   color: #f1f1f1;
-  margin-top: 100px;
+  margin-top: 14rem;
 }
 @media screen and (max-width: 768px) {
   .sub-header h1 {
@@ -351,16 +353,15 @@ color: #fff;
   }
 }
 .logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1209;
-margin: 55px auto;
-z-index: 1500;
+  position: fixed;
+  top: 1%;
+  left: 50%; /* Расположение по центру */
+  transform: translateX(-50%); /* Центрирование логотипа */
+  z-index: 1501;
 }
 .sub-header .logo {
 width: 100%;
-max-width: 250px;
+max-width: 180px;
 height: 100%;
 z-index: 1500;
 }
@@ -378,21 +379,25 @@ z-index: 1200;
 }
 
 .lang-dropdown-btn {
-background: none;
-border: none;
-cursor: pointer;
-font-size: 18px;
-color: #fff;
-display: flex;
-align-items: center;
-padding: 5px 10px;
-transition: color 0.3s;
-}
-.lang-dropdown-btn:hover .lang-name,
-.lang-dropdown-btn:hover .lang-arrow {
-color: #e4e4e4;
-}
-
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  }
+  .lang-dropdown-btn:hover .lang-name,
+  .lang-dropdown-btn:hover .lang-arrow {
+    color: #e4e4e4;
+  }
+  .lang-dropdown-btn .lang-name,
+  .lang-dropdown-btn .lang-arrow {
+    color: #a0a0a0;
+    transition: color 0.3s;
+  }
 .lang-name {
 margin-right: 10px;
 color: #9e9e9e;
@@ -456,7 +461,7 @@ display: grid;
 place-items: center;
 width: 88px;
 height: 150px;
-background-image: url("../assets/menu.svg");
+background-image: url("/assets/menu.svg");
 background-repeat: no-repeat;
 filter: brightness(70%);
 background-position: center;
@@ -466,7 +471,7 @@ transition: filter 0.3s;
 filter: brightness(100%);
 }
 body.open .navbar-burger {
-background-image: url("../assets/close.svg");
+background-image: url("/assets/close.svg");
 }
 .menu {
 z-index: 1200;
@@ -822,7 +827,7 @@ animation: none;
   position: relative;
   margin-top: 15rem;
   width: 100%;
-  background: #804ae498;
+  background: #9a6af1;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;
@@ -857,7 +862,7 @@ animation: none;
   transition: 0.5s;
 }
 .social-icon__link:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .menu__link {
   font-size: 1.2rem;

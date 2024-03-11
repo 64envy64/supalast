@@ -9,7 +9,7 @@ textElements.forEach((text) => {
     scrollTrigger: {
       trigger: text,
       start: "center 80%",
-      end: "center 20%",
+      end: "center 55%",
       scrub: true
     }
   });

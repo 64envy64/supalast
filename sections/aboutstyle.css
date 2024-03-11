@@ -84,10 +84,13 @@ display: none;
 }
 }
 @media (max-width: 700px) {
-.logo {
-  max-width: 100px; /* Уменьшаем максимальную ширину для маленьких экранов */
-  z-index: 1500;
-}
+  .logo {
+    z-index: 1501;
+  }
+  .logo-container {
+    max-width: 135px;
+    z-index: 1501;
+  }
 }
 .animated {
 opacity: 0;
@@ -143,10 +146,10 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 15%;
+height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 100%);
 pointer-events: none; /* Позволяет кликать через этот элемент */
-z-index: 1;
+z-index: 1000;
 resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
 }
 body.loading {
@@ -305,18 +308,17 @@ opacity: 0;
   }
 }
 .logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1209;
-margin: 55px auto;
-z-index: 2000;
+  position: fixed;
+  top: 1%;
+  left: 50%; /* Расположение по центру */
+  transform: translateX(-50%); /* Центрирование логотипа */
+  z-index: 1501;
 }
 .sub-header .logo {
 width: 100%;
-max-width: 250px;
+max-width: 180px;
 height: 100%;
-z-index: 2000;
+z-index: 1500;
 }
 button {
 border: 0;
@@ -332,20 +334,25 @@ z-index: 1200;
 }
 
 .lang-dropdown-btn {
-background: none;
-border: none;
-cursor: pointer;
-font-size: 18px;
-color: #fff;
-display: flex;
-align-items: center;
-padding: 5px 10px;
-transition: color 0.3s;
-}
-.lang-dropdown-btn:hover .lang-name,
-.lang-dropdown-btn:hover .lang-arrow {
-color: #e4e4e4;
-}
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  }
+  .lang-dropdown-btn:hover .lang-name,
+  .lang-dropdown-btn:hover .lang-arrow {
+    color: #e4e4e4;
+  }
+  .lang-dropdown-btn .lang-name,
+  .lang-dropdown-btn .lang-arrow {
+    color: #a0a0a0;
+    transition: color 0.3s;
+  }
 
 .lang-name {
 margin-right: 10px;
@@ -641,19 +648,17 @@ body.open .menu .dropbtn {
   height: 180%;
 }
 .about-us {
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding-top: 50px;
-  padding-bottom: 25px;
-  border-radius: var(--border-radius);
-  background-color: #f8f7f5;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 .about-header h1 {
   padding-top: 80px;
   padding-bottom: 50px;
   text-align: center;
-  font-size: 42px;
+  font-size: 46px;
   color: #100629;
 }
 
@@ -673,7 +678,7 @@ body.open .menu .dropbtn {
 
 .about-col img {
   width: 100%;
-  height: 75%; /* Auto height for responsive scaling */
+  height: 80%; /* Auto height for responsive scaling */
   object-fit: cover;
   border-radius: 10px;
   margin-left: 6rem;
@@ -681,7 +686,7 @@ body.open .menu .dropbtn {
 
 .about-col h1 {
   color: #543fb4;
-  font-size: 32px;
+  font-size: 46px;
   margin-bottom: 10px;
 }
 .about-col p {
@@ -697,8 +702,33 @@ body.open .menu .dropbtn {
   gap: 100px 120px;
   padding: 100px 50px;
 }
+.facilities {
+  color: #000000;
+  display: flex;
+  justify-content: center; 
+  list-style-type: none; 
+  padding: 0;
+  font-size: 1.5rem;
+}
 
-/* Добавляем линию сзади карточек */
+.facilities li {
+  margin-right: 30px; 
+}
+
+.facilities li:last-child {
+  margin-right: 0;
+}
+/* Медиа-запросы для адаптации под различные экраны */
+@media only screen and (max-width: 768px) {
+  .facilities {
+    flex-wrap: wrap; /* Разрешаем перенос элементов списка на новую строку */
+  }
+  
+  .facilities li {
+    margin-bottom: 10px; /* Отступ между элементами списка в мобильной версии */
+    margin-right: 20px; /* Убираем правый отступ у элементов списка */
+  }
+}
 .container::before {
   content: "";
   position: absolute;
@@ -886,8 +916,7 @@ a {
 }
 
 .news-item:hover img {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.03);
 }
 
 .news-item img {
@@ -895,6 +924,7 @@ a {
   height: 250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 .news-content {
@@ -969,6 +999,9 @@ a {
   .about-col img {
     margin-left: 0; /* Reset margin for image on mobile */
   }
+  .about-col h1 {
+    font-size: 40px;
+  }
 }
 /*---footer---*/
 
@@ -976,7 +1009,7 @@ a {
   position: relative;
   margin-top: 15rem;
   width: 100%;
-  background: #804ae498;
+  background: #9a6af1;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;
@@ -1011,7 +1044,7 @@ a {
   transition: 0.5s;
 }
 .social-icon__link:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .menu__link {
   font-size: 1.2rem;

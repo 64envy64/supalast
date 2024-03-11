@@ -85,7 +85,7 @@ display: none;
 }
 @media (max-width: 700px) {
 .logo {
-  max-width: 150px; /* Уменьшаем максимальную ширину для маленьких экранов */
+  max-width: 135px; /* Уменьшаем максимальную ширину для маленьких экранов */
   z-index: 1500;
 }
 }
@@ -143,10 +143,10 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 15%;
+height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 100%);
 pointer-events: none; /* Позволяет кликать через этот элемент */
-z-index: 1;
+z-index: 1000;
 resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
 }
 body.loading {
@@ -309,7 +309,7 @@ z-index: 2000;
 }
 .sub-header .logo {
 width: 100%;
-max-width: 250px;
+max-width: 200px;
 height: 100%;
 z-index: 2000;
 }
@@ -327,20 +327,25 @@ z-index: 1200;
 }
 
 .lang-dropdown-btn {
-background: none;
-border: none;
-cursor: pointer;
-font-size: 18px;
-color: #fff;
-display: flex;
-align-items: center;
-padding: 5px 10px;
-transition: color 0.3s;
-}
-.lang-dropdown-btn:hover .lang-name,
-.lang-dropdown-btn:hover .lang-arrow {
-color: #e4e4e4;
-}
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  }
+  .lang-dropdown-btn:hover .lang-name,
+  .lang-dropdown-btn:hover .lang-arrow {
+    color: #e4e4e4;
+  }
+  .lang-dropdown-btn .lang-name,
+  .lang-dropdown-btn .lang-arrow {
+    color: #a0a0a0;
+    transition: color 0.3s;
+  }
 
 .lang-name {
 margin-right: 10px;
@@ -723,9 +728,9 @@ body.open .menu .dropbtn {
   margin-bottom: 130px; /* Отступ между элементами внизу */
 }
 .profile .profile-img {
-  height: 260px;
-  width: 260px;
-  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0%;
   object-fit: cover;
 }
 .user-name {
@@ -780,7 +785,7 @@ body.open .menu .dropbtn {
   position: relative;
   margin-top: 15rem;
   width: 100%;
-  background: #804ae498;
+  background: #9a6af1;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;
@@ -815,7 +820,7 @@ body.open .menu .dropbtn {
   transition: 0.5s;
 }
 .social-icon__link:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .menu__link {
   font-size: 1.2rem;
