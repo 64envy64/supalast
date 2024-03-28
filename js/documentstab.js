@@ -1,62 +1,57 @@
-let filter_btn = document.querySelectorAll('.filter-btn');
-let tab_items = document.querySelectorAll('.tab-item');
-
-for (let i = 0; i < filter_btn.length; i++) {
-  filter_btn[i].addEventListener('click', function () {
-    for (let j = 0; j < filter_btn.length; j++) {
-      filter_btn[j].classList.remove('active');
-    }
-    let select_tab = filter_btn[i].getAttribute('data-tab');
-    filter_btn[i].classList.add('active');
-    for (let t = 0; t < tab_items.length; t++) {
-      document.querySelector('.tab-filter-item-container').style.height =
-        tab_items[t].scrollHeight + 'px';
-      if (tab_items[t].classList.contains(select_tab)) {
-        tab_items[t].classList.add('select_tab');
-      } else {
-        tab_items[t].classList.remove('select_tab');
-      }
-    }
-  });
-}
-
-for (let th = 0; th < tab_items.length; th++) {
-  document.querySelector('.tab-filter-item-container').style.height =
-    tab_items[th].scrollHeight + 'px';
-}
-
 document.addEventListener("DOMContentLoaded", function () {
-  const button2 = document.getElementById("button2");
-  let isCooldown = false; // Флаг, показывающий, идет ли в данный момент кулдаун
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const tabItems = document.querySelectorAll('.tab-item');
+  const buttons = document.querySelectorAll(".buttontab");
+  let isCooldown = false;
 
-  function addClassWithTimeout(className, timeout, callback) {
-    button2.classList.add(className);
+
+  filterBtns.forEach((filterBtn, index) => {
+    filterBtn.addEventListener('click', function () {
+
+      filterBtns.forEach(btn => btn.classList.remove('active'));
+
+      filterBtn.classList.add('active');
+      let selectTab = filterBtn.getAttribute('data-tab');
+
+      tabItems.forEach(tabItem => {
+        document.querySelector('.tab-filter-item-container').style.height = tabItem.scrollHeight + 'px';
+        if (tabItem.classList.contains(selectTab)) {
+          tabItem.classList.add('select_tab');
+        } else {
+          tabItem.classList.remove('select_tab');
+        }
+      });
+    });
+  });
+
+
+  tabItems.forEach(tabItem => {
+    document.querySelector('.tab-filter-item-container').style.height = tabItem.scrollHeight + 'px';
+  });
+
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      if (!isCooldown) {
+        isCooldown = true;
+        button.disabled = true;
+        addClassWithTimeout(button, "clicked", 2250, () =>
+          addClassWithTimeout(button, "validate", 2250)
+        );
+        setTimeout(() => {
+          isCooldown = false;
+          button.disabled = false;
+        }, 5000);
+      }
+    });
+  });
+
+
+  function addClassWithTimeout(element, className, timeout, callback) {
+    element.classList.add(className);
     setTimeout(() => {
-      button2.classList.remove(className);
+      element.classList.remove(className);
       callback && callback();
     }, timeout);
   }
-
-  button2.addEventListener("click", function () {
-    
-    if (!isCooldown) {
-      isCooldown = true; 
-
-      
-      button2.disabled = true;
-
-      
-      addClassWithTimeout("clicked", 2250, () =>
-        addClassWithTimeout("validate", 2250)
-      );
-
-      
-      setTimeout(() => {
-        isCooldown = false; 
-        
-        button2.disabled = false;
-      }, 5000); 
-    }
-  });
 });
-
