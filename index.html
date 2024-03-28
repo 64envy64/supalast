@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
         <meta property="og:title" content="Aqbobek International School - школа больших возможностей" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content=""/>
-        <link rel="icon" type="image/png" href="images/title.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,7 +74,7 @@
           <div class="dropdown">
             <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="#">Анкета</a>
+              <a href="/sections/stages.html">Этапы</a>
               <a href="#">Гранты</a>
               <a href="#">Стоимость обучения</a>
               <a href="#">Подменю 4</a>
@@ -96,7 +96,7 @@
             <div class="dropdown-content">
               <a href="#">Правила школы</a>
               <a href="#">Политика обработки личных данных</a>
-              <a href="#">Подменю 3</a>
+              <a href="/sections/documents.html">Документы</a>  
               <a href="#">Подменю 4</a>
             </div>
           </div>
@@ -107,12 +107,12 @@
          const body = document.body;
          body.classList.toggle("open");
  
-         // Проверка, открыто ли меню
+         
          if (body.classList.contains("open")) {
-         // Заблокировать прокрутку страницы
+         
            body.style.overflow = "hidden";
          } else {
-         // Разблокировать прокрутку страницы
+         
            body.style.overflow = "";
    }
  };
@@ -120,14 +120,14 @@
 <script>
 $(document).ready(function(){
   $(".dropbtn").click(function(e){
-    e.stopPropagation(); // Остановить всплытие события
-    $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
-    $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
-    $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
-    $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+    e.stopPropagation(); 
+    $(".dropdown-content").hide(); 
+    $(this).next(".dropdown-content").toggle(); 
+    $(".dropbtn").css("opacity", "0.25"); 
+    $(this).css("opacity", "1"); 
   });
 
-  // Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+  
   $(document).click(function(){
     $(".dropdown-content").hide();
     $(".dropbtn").css("opacity", "1");
@@ -183,6 +183,7 @@ $(document).ready(function(){
     <p>Создание благополучного общества через сохранение национальных ценностей и воспитание глобального гражданства</p>
   </div>
 </section>
+
 
 <section class="campusbg">
   <section class="campus">
@@ -252,7 +253,7 @@ $(document).ready(function(){
                 <i class="fas fa-chevron-down d-arrow"></i>
             </button>
             <p>Ответ</p>
-        </div>
+          </div>
     </div>
 </section>
 <div class="wrapper">
@@ -346,12 +347,12 @@ $(document).ready(function(){
     </ul>
     <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
   </footer>
-  <script defer src="assets/landing.js"></script>
-  <script src="assets/bcktotoppreloader.js"></script>
-  <script src="assets/scrollrevealelmnts.js"></script>
+  <script defer src="js/landing.js"></script>
+  <script src="js/bcktotoppreloader.js"></script>
+  <script src="js/scrollrevealelmnts.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" async></script>
-<script defer src="gallery.js"></script>
-<script src="assets/language.js" async></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script defer src="js/gallery.js"></script>
+<script src="js/language.js" async></script>
     </body>
 </html>

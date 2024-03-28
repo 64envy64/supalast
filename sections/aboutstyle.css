@@ -36,18 +36,18 @@ z-index: 1200;
 .phone-link {
 display: flex;
 align-items: center;
-color: #9e9e9e; /* Замените на ваш цвет текста */
+color: #9e9e9e; 
 text-decoration: none;
-margin-right: 20px; /* Расстояние между номером и переменной языка */
+margin-right: 20px; 
 transition: color 0.5s ease;
 }
 
 .phone-link:hover {
-color: #e4e4e4; /* Замените на ваш цвет при наведении */
+color: #e4e4e4; 
 }
 
 .phone .fa-phone-flip {
-margin-right: 10px; /* Расстояние между иконкой телефона и номером */
+margin-right: 10px; 
 font-size: 20px;
 }
 .lang-dropdown-btn .fa-earth-americas {
@@ -80,7 +80,7 @@ display: none;
 }
 @media (max-width: 700px) {
 .lang-dropdown-list {
-  width: 150px; /* Уменьшаем ширину для маленьких экранов */
+  width: 150px; 
 }
 }
 @media (max-width: 700px) {
@@ -99,11 +99,11 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 #back-to-top {
 display: inline-block;
-background-color: #6b69e2be;
+background-color: #7018ab7a;
 width: 50px;
 height: 50px;
 text-align: center;
-border-radius: 4px;
+border-radius: 10%;
 position: fixed;
 bottom: 30px;
 right: 30px;
@@ -124,7 +124,7 @@ color: #fff;
 }
 #back-to-top:hover {
 cursor: pointer;
-background-color: #4b49c5;
+background-color: #7049c5;
 }
 #back-to-top:active {
 background-color: #cecece;
@@ -148,9 +148,9 @@ left: 0;
 width: 100%;
 height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 100%);
-pointer-events: none; /* Позволяет кликать через этот элемент */
+pointer-events: none;
 z-index: 1000;
-resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
+resize: horizontal; 
 }
 body.loading {
   overflow: hidden;
@@ -291,27 +291,27 @@ opacity: 0;
 
 .sub-header h1 {
   position: absolute;
-  top: 35%;
-  font-size: 4vw;
+  top: 20%;
+  font-size: 5vw;
   font-weight: 600;
   color: #f1f1f1;
   text-align: left;
   padding-left: 4em;
-  width: 80%; /* Ширина заголовка на мобильных устройствах */
-  max-width: 400px; /* Максимальная ширина заголовка */
+  width: 80%; 
+  max-width: 400px; 
 }
 @media screen and (max-width: 768px) {
   .sub-header h1 {
     font-size: 14vw;
-    width: 90%; /* Ширина заголовка на мобильных устройствах */
-    padding-left: 1em; /* Отступ слева на мобильных устройствах */
+    width: 90%; 
+    padding-left: 1em; 
   }
 }
 .logo-container {
   position: fixed;
   top: 1%;
-  left: 50%; /* Расположение по центру */
-  transform: translateX(-50%); /* Центрирование логотипа */
+  left: 50%; 
+  transform: translateX(-50%); 
   z-index: 1501;
 }
 .sub-header .logo {
@@ -319,6 +319,9 @@ width: 100%;
 max-width: 180px;
 height: 100%;
 z-index: 1500;
+}
+.sub-header .logo:hover {
+  opacity: 0.7;
 }
 button {
 border: 0;
@@ -442,7 +445,8 @@ background: rgba(0, 0, 0, 0.959);
 opacity: 0;
 overflow: hidden;
 visibility: hidden;
-transition: 0.5s;
+transition: 0.4s;
+overflow-y: auto;
 }
 
 body.open .menu {
@@ -469,7 +473,7 @@ align-items: flex-start;
 }
 .menu .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   min-width: 160px;
   z-index: 1;
   left: 280px; /* Установите фиксированное расстояние здесь */
@@ -490,7 +494,7 @@ transform-origin: 50% 50%;
 transition: 0.3s;
 }
 .menu .dropbtn:hover::after {
-transform: scaleX(1);
+transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
@@ -605,14 +609,6 @@ body.open .menu .dropbtn {
     margin-left: 50px;
   }
 }
-@media (max-width: 700px) {
-.header {
-  min-height: 100vh;
-}
-.text-box h1 {
-  font-size: 16px;
-}
-}
 .hero-btn{
   display: inline-block;
   text-decoration: none;
@@ -647,6 +643,72 @@ body.open .menu .dropbtn {
 .hero-btn:hover::before{
   height: 180%;
 }
+
+.tooltip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tooltip {
+  position: absolute;
+  top: 5px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  background-color: #7118ab;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background-color: #7118ab;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Применяем стили к каждому тултипу */
+.facilities li[data-tooltip]:hover + .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Устанавливаем текст тултипа на основе атрибута data-tooltip */
+.facilities li[data-tooltip]:hover + .tooltip::before {
+  content: attr(data-tooltip);
+}
+
+.textt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.svgIcon {
+  width: 16px;
+  height: auto;
+}
 .about-us {
   width: 90%;
   margin: auto;
@@ -656,7 +718,6 @@ body.open .menu .dropbtn {
 }
 .about-header h1 {
   padding-top: 80px;
-  padding-bottom: 50px;
   text-align: center;
   font-size: 46px;
   color: #100629;
@@ -670,15 +731,18 @@ body.open .menu .dropbtn {
 
 .about-col {
   width: 35%;
-  padding: 30px 20px; /* Adjust the padding as needed */
-  text-align: left; /* Align text to the left */
+  padding: 30px 20px; 
+  text-align: left; 
   margin-right: 55px;
   box-sizing: border-box;
+}
+.about-col-p {
+  padding-bottom: 100px;
 }
 
 .about-col img {
   width: 100%;
-  height: 80%; /* Auto height for responsive scaling */
+  height: 80%; 
   object-fit: cover;
   border-radius: 10px;
   margin-left: 6rem;
@@ -704,10 +768,11 @@ body.open .menu .dropbtn {
 }
 .facilities {
   color: #000000;
+  text-align: center;
   display: flex;
   justify-content: center; 
   list-style-type: none; 
-  padding: 0;
+  padding-top: 50px;
   font-size: 1.5rem;
 }
 
@@ -839,11 +904,13 @@ body.open .menu .dropbtn {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 90vh;
 }
 .numbers {
-  background-color: #ece8f7;
+  background-color: #e0e0e0;
   border-radius: var(--border-radius);
+  margin: 20px 75px 20px 75px;
+  padding: 30px 0px 30px 0px;
+  overflow: hidden;
 }
 .text {
   font-size: 8vw;
@@ -858,7 +925,7 @@ body.open .menu .dropbtn {
   background-clip: text;
   background-size: 0%;
   transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
-  border-bottom: 2px solid #2f2b2834;
+  border-bottom: 2px solid #2f2b2815;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -867,7 +934,7 @@ body.open .menu .dropbtn {
 }
 .containerr span {
   position: absolute;
-  font-size: 4.5vw;
+  font-size: 4.3vw;
   width: 100%;
   height: 100%;
   background-color: #804ae4;
@@ -949,6 +1016,10 @@ a {
     width: 80%;
     left: 10%;
   }
+
+  .numbers {
+    margin: 20px 20px 20px 20px;
+  }
   
   .containerr span {
     font-size: 6vw;
@@ -1007,9 +1078,9 @@ a {
 
 .footer {
   position: relative;
-  margin-top: 15rem;
+  margin-top: 100px;
   width: 100%;
-  background: #9a6af1;
+  background: #7118ab;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;
@@ -1037,9 +1108,9 @@ a {
 }
 
 .social-icon__link {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #fff;
-  margin: 0 10px;
+  margin: 20px 15px 0 0;
   display: inline-block;
   transition: 0.5s;
 }
@@ -1088,14 +1159,14 @@ a {
 
 .wave#wave2 {
   z-index: 999;
-  opacity: 0.5;
+  opacity: 0.6;
   bottom: 10px;
   animation: animate 7s linear infinite !important;
 }
 
 .wave#wave3 {
   z-index: 1000;
-  opacity: 0.2;
+  opacity: 0.4;
   bottom: 15px;
   animation: animateWaves 6s linear infinite;
 }
@@ -1130,11 +1201,11 @@ a {
     padding: 0px 0px;
   }
   .menu__link {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     align-items: center;
   }
   .social-icon__link {
-    font-size: 2rem;
+    font-size: 1.8rem;
     align-items: center;
   }
 }

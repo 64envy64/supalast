@@ -1,3 +1,4 @@
+@import url("fonts/steppe/stylesheet.css");
 *{
   margin: 0;
   padding: 0;
@@ -8,6 +9,68 @@ html,body {
 }
 :root {
   --border-radius: 2rem;
+  --ultramarine-blue_10: hsla(235, 70%, 60%, 0.1);
+  --ultramarine-blue: hsl(235, 70%, 60%);
+  --orange-peel_10: hsla(36, 100%, 55%, 0.1);
+  --space-cadet_20: hsla(248, 32%, 23%, 0.2);
+  --space-cadet_80: hsla(247, 35%, 19%, 0.8);
+  --space-cadet-2: hsl(247, 35%, 19%);
+  --old-lavender: hsl(251, 9%, 46%);
+  --orange-peel: hsl(36, 100%, 55%);
+  --tart-orange: hsl(0, 100%, 63%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured-1: hsl(0, 0%, 96%);
+  --cultured-2: hsl(0, 0%, 93%);
+  --coral_10: hsla(14, 95%, 66%, 0.1);
+  --white_10: hsla(0, 0%, 100%, 0.1);
+  --black_80: hsla(0, 0%, 0%, 0.8);
+  --pumpkin: hsl(26, 98%, 49%);
+  --white: hsl(0, 0%, 100%);
+
+    /**
+   * typography
+   */
+
+   --fs-1: 4rem;
+   --fs-2: 3.2rem;
+   --fs-3: 2.4rem;
+   --fs-4: 2rem;
+   --fs-5: 1.8rem;
+   --fs-6: 1.4rem;
+ 
+   --fw-500: 500;
+   --fw-600: 600;
+   --fw-700: 700;
+   --fw-800: 800;
+ 
+   /**
+    * spacing
+    */
+ 
+   --section-padding: 80px;
+ 
+   /**
+    * box shadow
+    */
+ 
+   --shadow-1: 0 8px 20px hsla(0, 0%, 0%, 0.06);
+   --shadow-2: 0px 4px 10px hsla(0, 0%, 0%, 0.05);
+ 
+   /**
+    * border radius
+    */
+ 
+   --radius-4: 4px;
+   --radius-6: 6px;
+ 
+   /**
+    * transition
+    */
+ 
+   --transition-1: 0.25s ease;
+   --transition-2: 0.5s ease;
+   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+   --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }
 body{
   background: #f0f0f0;
@@ -53,19 +116,20 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 #back-to-top {
 display: inline-block;
-background-color: #6b69e2be;
+background-color: #a03ce37b;
 width: 50px;
 height: 50px;
 text-align: center;
-border-radius: 4px;
+border-radius: 10%;
 position: fixed;
 bottom: 30px;
 right: 30px;
 transition: background-color .3s, 
-  opacity .5s, visibility .5s;
+  opacity .5s, visibility .5s, color .4s;
 opacity: 0;
 visibility: hidden;
 z-index: 1000;
+color: #fff;
 }
 #back-to-top::after {
 content: "\f077";
@@ -74,14 +138,14 @@ font-weight: normal;
 font-style: normal;
 font-size: 2em;
 line-height: 50px;
-color: #fff;
 }
 #back-to-top:hover {
 cursor: pointer;
-background-color: #4b49c5;
+background-color: #ffa405;
+color: #000;
 }
 #back-to-top:active {
-background-color: #cecece;
+background-color: #e2e2e2;
 }
 #back-to-top.show {
 opacity: 1;
@@ -343,7 +407,7 @@ transition: opacity 1s ease-out;
 .spinner {
 margin-bottom: 30px;
 border: 4px solid rgba(0, 0, 0, 0.1);
-border-top: 4px solid #524FD5;
+border-top: 4px solid #7118ab;
 border-radius: 50%;
 width: 40px;
 height: 40px;
@@ -424,6 +488,10 @@ width: 100%;
 max-width: 180px;
 height: 100%;
 z-index: 1500;
+transition: opacity 0.3s;
+}
+.header .logo:hover {
+  opacity: 0.7;
 }
 button {
 border: 0;
@@ -511,12 +579,13 @@ padding-left: 25px;
 }
 .navbar-burger {
 z-index: 1501;
-top: 0;
-left: 0;
+top: 30px;
+left: 20px;
 display: grid;
 place-items: center;
-width: 88px;
-height: 150px;
+width: 44px;
+height: 75px;
+pointer-events: visible;
 background-image: url("./assets/menu.svg");
 background-repeat: no-repeat;
 filter: brightness(70%);
@@ -573,9 +642,9 @@ align-items: flex-start;
   position: fixed;
   min-width: 160px;
   z-index: 1;
-  left: 280px; /* Установите фиксированное расстояние здесь */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-50%); /* Смещение вверх на половину высоты элемента */
+  left: 280px; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .menu .dropbtn::after {
 content: "";
@@ -591,17 +660,17 @@ transform-origin: 50% 50%;
 transition: 0.3s;
 }
 .menu .dropbtn:hover::after {
-transform: scaleX(1);
+transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.3s backwards;
+  animation: appear 0.2s backwards;
   }
   
   @keyframes appear {
   0% {
     opacity: 0;
-    translate: 0 50px;
+    translate: 0 20px;
   }
   100% {
     opacity: 1;
@@ -621,8 +690,9 @@ body.open .menu .dropbtn {
   transform: translateY(-40%); /* Смещение вверх на половину высоты элемента */
 }
 .dropdown-content a {
-  color: white; /* Установи цвет текста на белый */
-  padding: 20px 16px;
+  color: white; 
+  font-family: "Steppe";
+  padding: 20px 34px;
   width: 200px;
   text-align: left;
   text-decoration: none;
@@ -635,7 +705,8 @@ body.open .menu .dropbtn {
 /* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
-  color: white; /* Установите цвет текста на белый */
+  font-family: "Steppe";
+  color: white;
   padding: 16px;
   font-size: 40px;
   border: none;
@@ -650,7 +721,7 @@ body.open .menu .dropbtn {
 }
 .dropdown .fa-chevron-right {
   font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
+  margin-left: 20px;
   transition: all 0.3s ease;
 }
 .dropdown:hover .fa-chevron-right,
@@ -661,31 +732,33 @@ body.open .menu .dropbtn {
   .dropbtn {
     font-size: 18px;
     margin-left: 2px;
+    padding: 12px;
   }
   .dropdown-content a{
     font-size: 16px;
     margin-left: -75px;
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 16px;
+    padding: 12px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
+    padding: 14px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .dropbtn {
-    font-size: 24px;
+    font-size: 26px;
   }
   .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin-left: 16px;
   }
   .menu {
     z-index: 1200;
@@ -764,11 +837,9 @@ display: none;
 .lang-name {
 display: none;
 }
-}
-@media (max-width: 700px) {
 .lang-dropdown-list {
-width: 100px; /* Уменьшаем ширину для маленьких экранов */
-}
+  width: 100px; /* Уменьшаем ширину для маленьких экранов */
+  }
 }
 .text-box {
   width: 100%;
@@ -783,7 +854,7 @@ width: 100px; /* Уменьшаем ширину для маленьких эк�
   font-weight: 600;
 }
 .text-box h1 span {
-color: #6f53ed;
+color: #7118ab;
 position: relative;
 }
 .text-box h1 span::before {
@@ -861,10 +932,10 @@ transform: translateY(-30%);
 .box-container .box {
 height: 15rem;
 width: 24rem;
-background: #fff;
+background: #f7f7f7;
 text-align: center;
 border-radius: 1rem;
-box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.123);
+box-shadow: 0 .1rem .5rem rgba(0, 0, 0, 0.123);
 margin: 4rem;
 cursor: pointer;
 }
@@ -875,8 +946,8 @@ line-height: 4rem;
 text-align: center;
 border-radius: 50%;
 color: #fff;
-background: #514fd5;
-font-size: 2rem;
+background: #7118ab;
+font-size: 1.6rem;
 margin: 2rem 0;
 transition: .2s;
 }
@@ -894,11 +965,11 @@ transition: .2s;
 }
 
 .c-button--gooey {
-  color: #c2c1ff;
-  background-color: #fdfdfd21;
+  color: #ffffff;
+  background-color: #7118ab;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  border: 2px solid #514fd5a8;
+  border: 2px solid #7118ab;
   border-radius: 5px;
   position: relative;
   transition: all 700ms ease;
@@ -917,7 +988,7 @@ transition: .2s;
 }
 
 .c-button--gooey .c-button__blobs div {
-  background-color: #514fd5;
+  background-color: #ffa405;
   width: 34%;
   height: 100%;
   border-radius: 100%;
@@ -941,14 +1012,15 @@ transition: .2s;
 }
 
 .c-button--gooey:hover {
-  color: #fff;
+  color: #0e0e0e;
+  border: 2px solid #ffa405;
 }
 
 .c-button--gooey:hover .c-button__blobs div {
   transform: scale(1.4) translateY(0) translateZ(0);
 }
 .box-container .box:hover i{
-background: #4c35b1;
+background: #7d2db3;
 }
 .box-container .box h3{
 font-size: 1.5rem;
@@ -1004,6 +1076,7 @@ transform: translateY(-5);
   display: none; /* Скрываем элемент ::before на мобильных устройствах */
 }
 }
+
 /*---- pluses ----*/
 
 .pluses {
@@ -1189,7 +1262,7 @@ left: 50%;
 transform: translateX(-50%);
 width: 90%;
 height: 90%;
-background: linear-gradient(55.83deg, #9470db 11.35%, rgb(132, 55, 165) 100.99%);
+background: linear-gradient(55.83deg, #7748d4 11.35%, rgb(132, 55, 165) 100.99%);
 border-radius: 20px;
 z-index: -1;
 }
@@ -1254,7 +1327,7 @@ left: 50%;
 transform: translateX(-50%);
 position: absolute;
 opacity: 0;
-transition: 0.5s;
+transition: 0.4s;
 }
 
 .layer:hover h4 {
@@ -1411,10 +1484,10 @@ font-size: 1.15rem;
 position: absolute;
 text-align: center;
 line-height: 44px;
-background: #524FD5;
+background: #7118ab;
 border-radius: 50%;
 transform: translateY(-50%);
-transition: transform 0.1s linear, background 0.3s;
+transition: transform 0.1s linear, background 0.3s, color 0.5s;
 }
 
 .wrapper i:active {
@@ -1422,7 +1495,8 @@ transform: translateY(-50%) scale(0.9);
 }
 
 .wrapper i:hover {
-background: #4443b6;
+background: #ffa405;
+color: #000;
 }
 
 .wrapper i:first-child {
@@ -1503,7 +1577,7 @@ right: 0px;
   position: relative;
   margin-top: 100px;
   width: 100%;
-  background: #9a6af1;
+  background: #7118ab;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;

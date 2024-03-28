@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,15 +128,13 @@ $(document).click(function(){
 <!--About us-->
 
   <div class="about-header">
-    <h1>Akbobek International School</h1>
+    <h1>Aqbobek International School</h1>
   </div>
   <section class="about-us">
   <div class="center-container">
     <div class="about-col">
       <h1>Школа Больших Возможностей</h1>
-      <p>Это уникальная школа предоставляющая детям от 0 до 11 класса возможность получить качественное международное образование в Казахстане. AIS обучение ведется по ведущим образовательным программам: <strong>госстандарт / сингапурская программа обучения</strong>.
-      <br>
-      <br>AIS стремится поддерживать стабильную, заботливую, поддерживающую семейную среду. Учащиеся получают постоянную поддержку от сообщества школы через ежедневное общение с преподавателями.</p>
+      <p class="about-col-p">Это уникальная школа предоставляющая детям от 0 до 11 класса возможность получить качественное международное образование в Казахстане. AIS обучение ведется по ведущим образовательным программам: <strong>госстандарт / сингапурская программа обучения</strong></p>.
       <a href="" class="hero-btn">ПОДРОБНЕЕ</a>
     </div>
     <div class="about-col">
@@ -144,13 +142,6 @@ $(document).click(function(){
     </div>
   </div>
 </section>
-
-<ul class="facilities">
-    <li>Глобальное Гражданство</li>
-    <li>Цифровое гражданство</li>
-    <li>Эффективное обучение</li>
-    <li>Эффективное преподавание</li>
-  </ul>
 
 <!--cards-->
 <div class="container">
@@ -208,6 +199,17 @@ $(document).click(function(){
 </div>
 </section>
 
+<div class="tooltip-container">
+  <ul class="facilities">
+    <li data-tooltip="Текст тултипа для Глобального Гражданства">Глобальное Гражданство</li>
+    <li data-tooltip="Текст тултипа для Цифрового гражданства">Цифровое гражданство</li>
+    <li data-tooltip="Текст тултипа для Эффективного обучения">Эффективное обучение</li>
+    <li data-tooltip="Текст тултипа для Эффективного преподавания">Эффективное преподавание</li>
+  </ul>
+  <span class="tooltip">Наши определения</span>
+</div>
+
+
 <!--INTERACTIVE-->
 <section class="news-container no-resize">
   <a href="staffmain.html" class="news-item">
@@ -244,16 +246,16 @@ $(document).click(function(){
     </div>
     <ul class="social-icon">
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
-          <ion-icon name="logo-instagram"></ion-icon>
+        <i class="fa-brands fa-instagram"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
-          <ion-icon name="logo-facebook"></ion-icon>
+        <i class="fa-brands fa-facebook"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
-          <ion-icon name="logo-google"></ion-icon>
+        <i class="fa-brands fa-google"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
-          <ion-icon name="logo-youtube"></ion-icon>
+        <i class="fa-brands fa-youtube"></i>
         </a></li>
     </ul>
     <ul class="menufoot">
@@ -267,11 +269,10 @@ $(document).click(function(){
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script src="../assets/bcktotoppreloader.js"></script>
-  <script src="../assets/scrollrevealelmnts.js" defer></script>
+  <script src="../js/bcktotoppreloader.js"></script>
+  <script src="../js/scrollrevealelmnts.js" defer></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script defer src="../assets/gsap.js"></script>
-<script src="../assets/language.js" defer></script>
+<script defer src="../js/gsap.js"></script>
+<script src="../js/language.js" defer></script>
     </body>
 </html>
