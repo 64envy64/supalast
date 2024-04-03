@@ -1,3 +1,4 @@
+@import url("../fonts/steppe/stylesheet.css");
 *{
   margin: 0;
   padding: 0;
@@ -96,6 +97,52 @@ resize: none !important;
   top: 30rem;
   height: auto;
 }
+/* This block styles the gallery track */
+.gallery-track {
+  background: #000;
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+  padding: 0.25rem;
+  will-change: transform;
+}
+
+/* This block styles the card element */
+.card {
+  height: 400px;
+  overflow: hidden;
+}
+
+/* This block styles the element nested within the card class, specifically targeting the element with the class "card-image-wrapper" */
+.card .card-image-wrapper {
+  height: 135%;
+  will-change: transform;
+}
+
+/* This block styles the image element nested within the "card-image-wrapper" class */
+.card .card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries for responsive design */
+
+/* This media query applies styles when the screen width is less than 800px */
+@media (max-width: 800px) {
+  .gallery-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* This media query applies styles when the screen width is less than 550px */
+@media (max-width: 550px) {
+  .gallery-track {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 @keyframes slideInArka1 {
   from {
     transform: translateY(100%) rotate(-180deg) scaleX(-1);
@@ -484,41 +531,51 @@ transform: translateY(20px);
 transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 #back-to-top {
-display: inline-block;
-background-color: #6b69e2be;
-width: 50px;
-height: 50px;
-text-align: center;
-border-radius: 10%;
-position: fixed;
-bottom: 30px;
-right: 30px;
-transition: background-color .3s, 
-  opacity .5s, visibility .5s;
-opacity: 0;
-visibility: hidden;
-z-index: 1000;
-}
-#back-to-top::after {
-content: "\f077";
-font-family: FontAwesome;
-font-weight: normal;
-font-style: normal;
-font-size: 2em;
-line-height: 50px;
-color: #fff;
-}
-#back-to-top:hover {
-cursor: pointer;
-background-color: #4b49c5;
-}
-#back-to-top:active {
-background-color: #cecece;
-}
-#back-to-top.show {
-opacity: 1;
-visibility: visible;
-}
+  display: inline-block;
+  background-color: #a03ce37b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s, color .4s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  color: #fff;
+  }
+  #back-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  }
+  #back-to-top:hover {
+  cursor: pointer;
+  background-color: #ffa405;
+  color: #000;
+  }
+  #back-to-top:active {
+  background-color: #e2e2e2;
+  }
+  #back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  }
+  @media (max-width: 700px) {
+    #back-to-top {
+      width: 44px;
+      height: 44px;
+    }
+    #back-to-top::after {
+      line-height: 44px;
+    }
+  }
 body{
   background: #f0f0f0;
   overflow-x: hidden;

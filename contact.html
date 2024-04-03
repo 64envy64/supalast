@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aqbobek International School - школа больших возможностей</title>
+        <title>Aqbobek International School - контакты школы</title>
         <meta property="og:title" content="Контакты - Aqbobek International School" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content=""/>
@@ -101,12 +101,12 @@
        const body = document.body;
        body.classList.toggle("open");
 
-       // Проверка, открыто ли меню
+       
        if (body.classList.contains("open")) {
-       // Заблокировать прокрутку страницы
+       
          body.style.overflow = "hidden";
        } else {
-       // Разблокировать прокрутку страницы
+       
          body.style.overflow = "";
  }
 };
@@ -114,14 +114,14 @@
 <script>
 $(document).ready(function(){
 $(".dropbtn").click(function(e){
-  e.stopPropagation(); // Остановить всплытие события
-  $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
-  $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
-  $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
-  $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+  e.stopPropagation(); 
+  $(".dropdown-content").hide(); 
+  $(this).next(".dropdown-content").toggle(); 
+  $(".dropbtn").css("opacity", "0.25"); 
+  $(this).css("opacity", "1"); 
 });
 
-// Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+
 $(document).click(function(){
   $(".dropdown-content").hide();
   $(".dropbtn").css("opacity", "1");

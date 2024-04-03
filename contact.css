@@ -1,3 +1,4 @@
+@import url("fonts/steppe/stylesheet.css");
 *{
   margin: 0;
   padding: 0;
@@ -94,51 +95,51 @@ transform: translateY(20px);
 transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 #back-to-top {
-display: inline-block;
-background-color: #6b69e2be;
-width: 50px;
-height: 50px;
-text-align: center;
-border-radius: 10%;
-position: fixed;
-bottom: 30px;
-right: 30px;
-transition: background-color .3s, 
-  opacity .5s, visibility .5s;
-opacity: 0;
-visibility: hidden;
-z-index: 1000;
-}
-#back-to-top::after {
-content: "\f077";
-font-family: FontAwesome;
-font-weight: normal;
-font-style: normal;
-font-size: 2em;
-line-height: 50px;
-color: #fff;
-}
-#back-to-top:hover {
-cursor: pointer;
-background-color: #4b49c5;
-}
-#back-to-top:active {
-background-color: #cecece;
-}
-#back-to-top.show {
-opacity: 1;
-visibility: visible;
-}
-@media (max-width: 400px) {
-  #back-to-top {
-    width: 45px;
-    height: 45px;
+  display: inline-block;
+  background-color: #a03ce37b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s, color .4s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  color: #fff;
   }
   #back-to-top::after {
-    font-size: 1.8em;
-    line-height: 45px;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
   }
-}
+  #back-to-top:hover {
+  cursor: pointer;
+  background-color: #ffa405;
+  color: #000;
+  }
+  #back-to-top:active {
+  background-color: #e2e2e2;
+  }
+  #back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  }
+  @media (max-width: 700px) {
+    #back-to-top {
+      width: 44px;
+      height: 44px;
+    }
+    #back-to-top::after {
+      line-height: 44px;
+    }
+  }
 body{
   background: #f0f0f0;
   overflow-x: hidden;
@@ -374,6 +375,74 @@ border: 0;
 padding: 0;
 background: transparent;
 cursor: pointer;
+}
+.c-button {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0.7em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: #ffffff;
+  background-color: #7118ab;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: 2px solid #7118ab;
+  border-radius: 5px;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #ffa405;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 30ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #0e0e0e;
+  border: 2px solid #ffa405;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
 }
 .lang-dropdown {
 position: fixed;

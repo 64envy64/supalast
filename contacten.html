@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Akbobek International School - school of great opportunities</title>
-        <meta property="og:title" content="Contacts - Akbobek International School" />
+        <title>Aqbobek International School - school contacts</title>
+        <meta property="og:title" content="Contacts - Aqbobek International School" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content=""/>
         <meta property="og:description" content="Contacts and location of the school"/>
-        <link rel="icon" type="image/png" href="images/title.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="contact.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,25 +57,25 @@
     <div class="menu">
       <nav>
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.1s">О нас <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.1s">AIS <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="sections/abouten.html">О AIS</a>
-            <a href="sections/staffmainen.html">Наша команда</a>
-            <a href="sections/campuseng.html">О кампусе</a>
-            <a href="#">Внутренняя инфраструктура</a>
+            <a href="sections/abouten.html">About us</a>
+            <a href="sections/staffmainen.html">Our team</a>
+            <a href="sections/campusen.html">Campus</a>
+            <a href="#">Internal infrastructure</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.2s">Admission<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Анкета</a>
-            <a href="#">Гранты</a>
-            <a href="#">Стоимость обучения</a>
+            <a href="/sections/stagesen.html">Stages</a>
+            <a href="#">Grants</a>
+            <a href="#">Education fee</a>
             <a href="#">Подменю 4</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.2s">Employee<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
             <a href="#">Подменю 1</a>
             <a href="#">Подменю 2</a>
@@ -83,14 +83,14 @@
             <a href="#">Подменю 4</a>
           </div>
         </div>
-        <a href="#" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
-        <a href="contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+        <a href="#" class="dropbtn" style="animation-delay: 0.4s">News</a>
+        <a href="#" class="dropbtn" style="animation-delay: 0.5s">Contacts</a>
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.5s">Important<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Правила школы</a>
+            <a href="#">Rules</a>
             <a href="#">Политика обработки личных данных</a>
-            <a href="#">Подменю 3</a>
+            <a href="/sections/documents.html">Documents</a>  
             <a href="#">Подменю 4</a>
           </div>
         </div>
@@ -101,12 +101,12 @@
        const body = document.body;
        body.classList.toggle("open");
 
-       // Проверка, открыто ли меню
+       
        if (body.classList.contains("open")) {
-       // Заблокировать прокрутку страницы
+       
          body.style.overflow = "hidden";
        } else {
-       // Разблокировать прокрутку страницы
+       
          body.style.overflow = "";
  }
 };
@@ -114,14 +114,14 @@
 <script>
 $(document).ready(function(){
 $(".dropbtn").click(function(e){
-  e.stopPropagation(); // Остановить всплытие события
-  $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
-  $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
-  $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
-  $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+  e.stopPropagation(); 
+  $(".dropdown-content").hide(); 
+  $(this).next(".dropdown-content").toggle(); 
+  $(".dropbtn").css("opacity", "0.25"); 
+  $(this).css("opacity", "1"); 
 });
 
-// Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+
 $(document).click(function(){
   $(".dropdown-content").hide();
   $(".dropbtn").css("opacity", "1");
@@ -142,7 +142,7 @@ $(document).click(function(){
         <i class="fa fa-home"></i>
         <span>
           <h5>Oraza-Tateuly 13A</h5>
-          <p>Kazakhstan, Aqtobe KZ</p>
+          <p>Kazakhstan, Aktobe KZ</p>
         </span>
     </div>
     <div>
@@ -157,7 +157,7 @@ $(document).click(function(){
       <i class="fa fa-envelope-o"></i>
       <span>
         <h5>info@akbobek.kz</h5>
-        <p>E-mail us</p>
+        <p>School email</p>
       </span>
     </div>
   </div>
@@ -169,7 +169,7 @@ $(document).click(function(){
       <div class="contact-col">
         <h1>Contact us</h1>
         <p>We will reply anytime between 09:00 and 18:00 on weekdays.<br>To write personally - click on the button below</p>
-          <a href="" class="hero-btn">E-MAIL US</a>
+          <a href="" class="hero-btn">WRITE US</a>
       </div>
  </section>
 <!-- Back to top button -->
@@ -184,30 +184,28 @@ $(document).click(function(){
     </div>
     <ul class="social-icon">
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
-          <ion-icon name="logo-instagram"></ion-icon>
+        <i class="fa-brands fa-instagram"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
-          <ion-icon name="logo-facebook"></ion-icon>
+        <i class="fa-brands fa-facebook"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
-          <ion-icon name="logo-google"></ion-icon>
+        <i class="fa-brands fa-google"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
-          <ion-icon name="logo-youtube"></ion-icon>
+        <i class="fa-brands fa-youtube"></i>
         </a></li>
     </ul>
     <ul class="menufoot">
       <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="sections/abouten.html">About us</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">For parents</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Important</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Grants</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Contacts</a></li>
     </ul>
-    <p>&copy; 2024 Akbobek International School | All rights reserved</p>
+    <p>&copy; 2024 Aqbobek International School | All rights reserved</p>
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="assets/bcktotoppreloader.js"></script>
-<script defer src="assets/language.js"></script>
+<script src="js/bcktotoppreloader.js"></script>
+<script defer src="js/language.js"></script>
     </body>
 </html>

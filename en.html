@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Aqbobek International School - the first international private school in the region. 
-        A unique school providing children from 0 to 11th grade with the opportunity to receive a quality international education in Kazakhstan."/>
-        <title>Akbobek International School - school of great opportunities</title>
-        <meta property="og:title" content="Akbobek International School - school of great opportunities" />
+        <meta name="description" content="Aqbobek International School is the first international public school in the region. 
+        A unique school providing children from 0-11th grade with the opportunity to receive a quality international education in Kazakhstan."/>
+        <title>Aqbobek International School - a school of great opportunities</title>
+        <meta property="og:title" content="Aqbobek International School - a school of great opportunities" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content=""/>
-        <link rel="icon" type="image/png" href="images/title.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,10 @@
           </div>
       </div> 
       <section class="header">
-        <iframe src="https://player.vimeo.com/video/906478411?h=08c4313378&autoplay=1&muted=1&loop=1&background=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen id="backgroundVideo"></iframe>
+        <video autoplay muted loop id="backgroundVideo">
+          <source src="images/backgroundvideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="logo-container">
           <a href="index.html">
             <img src="images/logocolor.png" alt="Logo" class="logo">
@@ -60,25 +63,25 @@
       <div class="menu">
         <nav>
           <div class="dropdown">
-            <button class="dropbtn" style="animation-delay: 0.1s">О нас <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="dropbtn" style="animation-delay: 0.1s">AIS <i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="sections/about.html">О AIS</a>
-              <a href="sections/staffmain.html">Наша команда</a>
-              <a href="sections/campus.html">О кампусе</a>
-              <a href="#">Внутренняя инфраструктура</a>
+              <a href="sections/abouten.html">About us</a>
+              <a href="sections/staffmainen.html">Our team</a>
+              <a href="sections/campusen.html">Campus</a>
+              <a href="#">Internal infrastructure</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="dropbtn" style="animation-delay: 0.2s">Admission<i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="#">Анкета</a>
-              <a href="#">Гранты</a>
-              <a href="#">Стоимость обучения</a>
+              <a href="/sections/stagesen.html">Stages</a>
+              <a href="#">Grants</a>
+              <a href="#">Education fee</a>
               <a href="#">Подменю 4</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="dropbtn" style="animation-delay: 0.2s">Employee<i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
               <a href="#">Подменю 1</a>
               <a href="#">Подменю 2</a>
@@ -86,14 +89,14 @@
               <a href="#">Подменю 4</a>
             </div>
           </div>
-          <a href="#" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
-          <a href="contacten.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+          <a href="#" class="dropbtn" style="animation-delay: 0.4s">News</a>
+          <a href="contacten.html" class="dropbtn" style="animation-delay: 0.5s">Contacts</a>
           <div class="dropdown">
-            <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="dropbtn" style="animation-delay: 0.5s">Important<i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="#">Правила школы</a>
+              <a href="#">Rules</a>
               <a href="#">Политика обработки личных данных</a>
-              <a href="#">Подменю 3</a>
+              <a href="/sections/documents.html">Documents</a>  
               <a href="#">Подменю 4</a>
             </div>
           </div>
@@ -104,12 +107,12 @@
          const body = document.body;
          body.classList.toggle("open");
  
-         // Проверка, открыто ли меню
+         
          if (body.classList.contains("open")) {
-         // Заблокировать прокрутку страницы
+         
            body.style.overflow = "hidden";
          } else {
-         // Разблокировать прокрутку страницы
+         
            body.style.overflow = "";
    }
  };
@@ -117,14 +120,14 @@
 <script>
 $(document).ready(function(){
   $(".dropbtn").click(function(e){
-    e.stopPropagation(); // Остановить всплытие события
-    $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
-    $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
-    $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
-    $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+    e.stopPropagation(); 
+    $(".dropdown-content").hide(); 
+    $(this).next(".dropdown-content").toggle(); 
+    $(".dropbtn").css("opacity", "0.25"); 
+    $(this).css("opacity", "1"); 
   });
 
-  // Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+  
   $(document).click(function(){
     $(".dropdown-content").hide();
     $(".dropbtn").css("opacity", "1");
@@ -135,16 +138,16 @@ $(document).ready(function(){
               <div class="box" id="firstbox">
                 <i class="fas fa-graduation-cap"></i>
                 <h3>Unique education</h3>
-                <p>Singapore's training program and state standard</p>
+                <p>Singapore curriculum and state standard</p>
               </div>
               <div class="box" id="secondbox">
                 <i class="fa-solid fa-trophy"></i>
-                <h3>Work for results</h3>
+                <h3>Performance work</h3>
                 <p>Full-day school, only knowledge and development</p>
               </div>
               <div class="box" id="thirdbox">
                 <i class="fas fa-award"></i>
-                <h3>Variety of school clubs</h3>
+                <h3>Variety of circles</h3>
                 <p>Everything you need for athletic performance and health</p>
               </div>
           </div>
@@ -153,88 +156,68 @@ $(document).ready(function(){
       <div class="text-box">
         <h1>HARMONY OF <span></span></h1>
         <p>A unique learning program for your child<br>Get a quality international education now.</p>
-        <a href="" class="hero-btn">GET COUNSELING</a>
+        <button class="c-button c-button--gooey"> ENROLL IN SCHOOL
+          <div class="c-button__blobs">
+          <div></div>
+          <div></div>
+          <div></div>
+          </div>
+        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+              <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+          </defs>
+        </svg>
       </div>
   </section>
-<!-- Back to top button -->
+
 <a id="back-to-top"></a>
-<!--Courses-->
-<section class="courses">
-<section class="course">
-    <h2>Курсы</h2>
-    <p>Курсы которые мы предлагаем</p>
-    <div class="row">
-        <div class="course-col" id="firstcourse">
-            <div class="rowboxes">Intermediate</div>
-            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-        <div class="course-col" id="secondcourse">
-            <div class="rowboxes">Degree</div>
-            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-        <div class="course-col" id="thirdcourse">
-            <div class="rowboxes">Post Graduation</div>
-            <div class="course-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-    </div>
-</section>
-</section>
+
 <section class="pluses no-resize">
-  <h1>OUR MISSION</h1>
-  <p>Building a prosperous community through preserving national values and fostering global citizenship<p>
+  <div class="mission-content">
+    <h1>OUR <br>MISSION</h1>
+    <p>Creating a prosperous society by preserving national values and fostering global citizenship</p>
+  </div>
 </section>
-<section class="news-container no-resize">
-  <a href="#" class="news-item">
-      <img src="news/news3.png" alt="News 1">
-      <div class="news-content">
-          <h3>Talanttar Alemi</h3>
-          <p class="news-date">20.12.23</p>
-      </div>
-  </a>
 
-  <a href="#" class="news-item">
-      <img src="news/news2.png" alt="News 2">
-      <div class="news-content">
-          <h3>Winners of Owlympia International Olympiad</h3>
-          <p class="news-date">07.11.23</p>
-      </div>
-  </a>
 
-  <a href="#" class="news-item">
-      <img src="news/news1.png" alt="News 3">
-      <div class="news-content">
-          <h3>Teacher of the Year 2023</h3>
-          <p class="news-date">11.12.23</p>
-      </div>
-  </a>
-</section>
-<!---Pluses-->
-<br>
-    <div class="wrapper">
-      <i id="left" class="fa-solid fa-angle-left"></i>
-      <div class="carousel">
-        <img src="images/img-1.jpg" alt="img" draggable="false">
-        <img src="images/img-2.jpg" alt="img" draggable="false">
-        <img src="images/img-3.jpg" alt="img" draggable="false">
-        <img src="images/img-4.jpg" alt="img" draggable="false">
-        <img src="images/img-5.jpg" alt="img" draggable="false">
-        <img src="images/img-6.jpg" alt="img" draggable="false">
-        <img src="images/img-7.jpg" alt="img" draggable="false">
-        <img src="images/img-8.jpg" alt="img" draggable="false">
-        <img src="images/img-9.jpg" alt="img" draggable="false">
-      </div>
-      <i id="right" class="fa-solid fa-angle-right"></i>
+<section class="campusbg">
+  <section class="campus">
+    <h2>Our campus</h2>
+    <p>Take a look</p>
+  
+    <div class="row">
+        <div class="campus-col" id="firstimg">
+            <img src="images/1.jpg">
+            <div class="layer">
+                <h4>ENTRANCE</h4>
+        </div>
     </div>
+    <div class="campus-col" id="secondimg">
+        <img src="images/2.jpg">
+        <div class="layer">
+            <h4>HALL</h4>
+        </div>
+    </div>
+    <div class="campus-col" id="thirdimg">
+        <img src="images/3.jpg">
+        <div class="layer">
+            <h4>BACKYARD</h4>
+        </div>
+        </div>
+    </div>
+  </section>
+  </section>
     <section class="pluses no-resize">
-      <h1>OUR AIM</h1>
-      <p>Raising global citizens ready to innovate and change, shaping the future of our world<p>
-    </section>
+      <div class="mission-content">
+      <h1>OUR <br>GOAL</h1>
+      <p>Raising global citizens ready to innovate and change, shaping the future of our world</p>
+        </div>
+      </section>
 <div class="accordion no-resize">
     </div>
     <div class="accordion-text">
@@ -242,26 +225,26 @@ $(document).ready(function(){
       <div class="questions-container">
         <div class="question">
             <button>
-                <span>Как можно к вам поступить?</span>
+                <span>How can I apply to you?</span>
                 <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>Всего присутствует 4 этапа приёма в школу, вся информация о поступлении доступна на сайте www.aqbobek.edu.kz в разделе "Поступление"</p>
+            <p>There are a total of 4 stages of admission to the school, and all admission information is available at www.aqbobek.edu.kz under "Admissions"</p>
         </div>
 
         <div class="question">
             <button>
-                <span>Как узнать контакты школы?</span>
+                <span>How can I find out the contacts of school?</span>
                 <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>Связаться с нами можно на сайте www.aqbobek.edu.kz в разделе "Контакты"</p>
+            <p>You can contact us by phone number or email, also the school's contacts are described in the "Contacts" section</p>
         </div>
 
         <div class="question">
             <button>
-                <span>Как зарегистрироваться на пробное тестирование?</span>
+                <span>How do I sign up for a practice test?</span>
                 <i class="fas fa-chevron-down d-arrow"></i>
             </button>
-            <p>Вся информация по поводу пробного тестирования можно узнать на сайте www.aqbobek.edu.kz в разделе "Грант" или же на инстаграм-странице нашей школы</p>
+            <p>For all information regarding tryouts, please visit www.aqbobek.edu.kz under "Grant" or visit our school's instagram page</p>
         </div>
 
         <div class="question">
@@ -270,43 +253,33 @@ $(document).ready(function(){
                 <i class="fas fa-chevron-down d-arrow"></i>
             </button>
             <p>Ответ</p>
-        </div>
+          </div>
     </div>
 </section>
-<!--- campus -->
-<section class="campusbg">
-<section class="campus">
-  <h2>Our campus</h2>
-  <p>School appearance</p>
-
-  <div class="row">
-      <div class="campus-col" id="firstimg">
-          <img src="images/1.jpg">
-          <div class="layer">
-              <h4>ENTRANCE</h4>
-      </div>
+<div class="wrapper">
+  <i id="left" class="fa-solid fa-angle-left"></i>
+  <div class="carousel">
+    <img src="images/img-1.jpg" alt="img" draggable="false">
+    <img src="images/img-2.jpg" alt="img" draggable="false">
+    <img src="images/img-3.jpg" alt="img" draggable="false">
+    <img src="images/img-4.jpg" alt="img" draggable="false">
+    <img src="images/img-5.jpg" alt="img" draggable="false">
+    <img src="images/img-6.jpg" alt="img" draggable="false">
+    <img src="images/img-7.jpg" alt="img" draggable="false">
+    <img src="images/img-8.jpg" alt="img" draggable="false">
+    <img src="images/img-9.jpg" alt="img" draggable="false">
   </div>
-  <div class="campus-col" id="secondimg">
-      <img src="images/2.jpg">
-      <div class="layer">
-          <h4>HALL</h4>
-      </div>
-  </div>
-  <div class="campus-col" id="thirdimg">
-      <img src="images/3.jpg">
-      <div class="layer">
-          <h4>BACKYARD</h4>
-      </div>
-      </div>
-  </div>
-</section>
-</section>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+</div>
 <section class="pluses no-resize">
-  <h1>OUR VISION</h1>
-  <p>School for the training of global leaders of the future, curious and socially educated citizens<p>
+  <div class="mission-content">
+  <h1>OUR <br> VISION</h1>
+  <p>School for the training of global leaders of the future, curious and socially educated citizens</p>
+  </div>
 </section>
+
 <section class="partners">
-  <h2>Our partners</h2>
+  <h2>AIS Partners</h2>
 <br>
 <section class="slidebody">
   <div class="logos">
@@ -325,7 +298,22 @@ $(document).ready(function(){
 <section class="cta">
   <h1>Get a quality international education now</h1>
   <div class="background-img"></div>
-  <a href="" class="hero-btn">ENROLL</a>
+  <button class="c-button c-button--gooey"> BECOME A PART OF AIS
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
 </section>
 <br>
 
@@ -353,18 +341,18 @@ $(document).ready(function(){
     <ul class="menufoot">
       <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="sections/abouten.html">About us</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">For parents</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Important</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Grants</a></li>
       <li class="menu__item"><a class="menu__link" href="contacten.html">Contacts</a></li>
     </ul>
-    <p>&copy; 2024 Akbobek International School | All rights reserved</p>
+    <p>&copy; 2024 Aqbobek International School | All rights reserved</p>
   </footer>
-  <script defer src="assets/landing.js"></script>
-  <script src="assets/bcktotoppreloader.js"></script>
-  <script src="assets/scrollrevealelmnts.js" async></script>
+  <script defer src="js/landing.js"></script>
+  <script src="js/bcktotoppreloader.js"></script>
+  <script src="js/scrollrevealelmnts.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script defer src="gallery.js"></script>
-<script src="assets/language.js" async></script>
+<script defer src="js/gallery.js"></script>
+<script src="js/language.js" async></script>
     </body>
 </html>

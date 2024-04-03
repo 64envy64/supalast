@@ -1,3 +1,4 @@
+@import url("../fonts/steppe/stylesheet.css");
 *{
   margin: 0;
   padding: 0;
@@ -84,11 +85,13 @@ display: none;
 }
 }
 @media (max-width: 700px) {
-.logo {
-  max-width: 135px; /* Уменьшаем максимальную ширину для маленьких экранов */
-  z-index: 1500;
-}
-}
+  .logo {
+    z-index: 1500;
+  }
+  .logo-container {
+    max-width: 135px;
+  }
+  }
 .animated {
 opacity: 0;
 transform: translateY(20px);
@@ -96,7 +99,7 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 #back-to-top {
 display: inline-block;
-background-color: #6b69e2be;
+background-color: #a03ce37b;
 width: 50px;
 height: 50px;
 text-align: center;
@@ -105,10 +108,11 @@ position: fixed;
 bottom: 30px;
 right: 30px;
 transition: background-color .3s, 
-  opacity .5s, visibility .5s;
+  opacity .5s, visibility .5s, color .4s;
 opacity: 0;
 visibility: hidden;
 z-index: 1000;
+color: #fff;
 }
 #back-to-top::after {
 content: "\f077";
@@ -117,18 +121,27 @@ font-weight: normal;
 font-style: normal;
 font-size: 2em;
 line-height: 50px;
-color: #fff;
 }
 #back-to-top:hover {
 cursor: pointer;
-background-color: #4b49c5;
+background-color: #ffa405;
+color: #000;
 }
 #back-to-top:active {
-background-color: #cecece;
+background-color: #e2e2e2;
 }
 #back-to-top.show {
 opacity: 1;
 visibility: visible;
+}
+@media (max-width: 700px) {
+  #back-to-top {
+    width: 44px;
+    height: 44px;
+  }
+  #back-to-top::after {
+    line-height: 44px;
+  }
 }
 body{
   background: #f0f0f0;
@@ -145,9 +158,9 @@ left: 0;
 width: 100%;
 height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0) 100%);
-pointer-events: none; /* Позволяет кликать через этот элемент */
+pointer-events: none; 
 z-index: 1000;
-resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
+resize: horizontal;
 }
 body.loading {
   overflow: hidden;
@@ -300,19 +313,18 @@ opacity: 0;
   }
 }
 .logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1209;
-margin: 55px auto;
-z-index: 2000;
+  position: fixed;
+  top: 1%;
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 1501;
 }
 .sub-header .logo {
-width: 100%;
-max-width: 200px;
-height: 100%;
-z-index: 2000;
-transition: opacity 0.3s;
+  width: 100%;
+  max-width: 180px;
+  height: 100%;
+  z-index: 1500;
+  transition: opacity 0.3s;
 }
 .sub-header .logo:hover {
   opacity: 0.7;
@@ -324,13 +336,12 @@ background: transparent;
 cursor: pointer;
 }
 .lang-dropdown {
-position: fixed;
-top: 60px;
-right: 20px;
-z-index: 1200;
-}
-
-.lang-dropdown-btn {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 1501;
+  }
+  .lang-dropdown-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -350,70 +361,67 @@ z-index: 1200;
     color: #a0a0a0;
     transition: color 0.3s;
   }
-
-.lang-name {
-margin-right: 10px;
-color: #9e9e9e;
-}
-.lang-arrow {
-transition: transform 0.3s ease-in;
-color: #9e9e9e;
-}
-
-.lang-dropdown-btn.active .fa-angle-down {
-transform: rotate(180deg);
-}
-
-.lang-dropdown-list {
-display: none;
-position: absolute;
-background-color: #00000050;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
-border-radius: 10px;
-margin-top: 5px;
-right: 5px;
-transition: opacity .4s ease;
-}
-
-.lang-dropdown-list.active {
-display: block;
-}
-
-.lang-dropdown-item {
-padding: 10px;
-color: #fff;
-text-decoration: none;
-display: block;
-transition: background 0.3s;
-}
-
-.lang-dropdown-item:hover {
-background: #555;
-}
-.navbar,
-.navbar-burger,
-.menu {
-position: fixed;
-}
-.navbar {
-z-index: 1501;
-top: 0;
-left: 0;
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-height: 72px;
-padding-left: 25px;
-}
+  .lang-name {
+  margin-right: 10px;
+  color: #9e9e9e;
+  }
+  .lang-arrow {
+  transition: transform 0.3s ease-in;
+  color: #9e9e9e;
+  }
+  .lang-dropdown-btn.active .fa-angle-down {
+  transform: rotate(180deg);
+  }
+  .lang-dropdown-list {
+  display: none;
+  position: absolute;
+  background-color: #00000050;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  margin-top: 5px;
+  right: 5px;
+  transition: opacity .4s ease;
+  }
+  
+  .lang-dropdown-list.active {
+  display: block;
+  }
+  
+  .lang-dropdown-item {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+  }
+  .lang-dropdown-item:hover {
+  background: #555;
+  }
+  .navbar,
+  .navbar-burger,
+  .menu {
+  position: fixed;
+  }
+  .navbar {
+  z-index: 1501;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding-left: 25px;
+  }
 .navbar-burger {
 z-index: 1501;
-top: 0;
-left: 0;
+top: 30px;
+left: 20px;
 display: grid;
 place-items: center;
-width: 88px;
-height: 150px;
+width: 44px;
+height: 75px;
+pointer-events: visible;
 background-image: url("../assets/menu.svg");
 background-repeat: no-repeat;
 filter: brightness(70%);
@@ -439,7 +447,8 @@ background: rgba(0, 0, 0, 0.959);
 opacity: 0;
 overflow: hidden;
 visibility: hidden;
-transition: 0.5s;
+transition: 0.4s;
+overflow-y: auto;
 }
 
 body.open .menu {
@@ -466,12 +475,12 @@ align-items: flex-start;
 }
 .menu .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   min-width: 160px;
   z-index: 1;
-  left: 280px; /* Установите фиксированное расстояние здесь */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-50%); /* Смещение вверх на половину высоты элемента */
+  left: 280px; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .menu .dropbtn::after {
 content: "";
@@ -491,13 +500,13 @@ transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.3s backwards;
+  animation: appear 0.2s backwards;
   }
   
   @keyframes appear {
   0% {
     opacity: 0;
-    translate: 0 50px;
+    translate: 0 20px;
   }
   100% {
     opacity: 1;
@@ -517,8 +526,9 @@ body.open .menu .dropbtn {
   transform: translateY(-40%); /* Смещение вверх на половину высоты элемента */
 }
 .dropdown-content a {
-  color: white; /* Установи цвет текста на белый */
-  padding: 20px 16px;
+  color: white; 
+  font-family: "Steppe";
+  padding: 20px 34px;
   width: 200px;
   text-align: left;
   text-decoration: none;
@@ -531,7 +541,8 @@ body.open .menu .dropbtn {
 /* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
-  color: white; /* Установите цвет текста на белый */
+  font-family: "Steppe";
+  color: white;
   padding: 16px;
   font-size: 40px;
   border: none;
@@ -546,7 +557,7 @@ body.open .menu .dropbtn {
 }
 .dropdown .fa-chevron-right {
   font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
+  margin-left: 20px;
   transition: all 0.3s ease;
 }
 .dropdown:hover .fa-chevron-right,
@@ -557,31 +568,33 @@ body.open .menu .dropbtn {
   .dropbtn {
     font-size: 18px;
     margin-left: 2px;
+    padding: 12px;
   }
   .dropdown-content a{
     font-size: 16px;
     margin-left: -75px;
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 16px;
+    padding: 12px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
+    padding: 14px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .dropbtn {
-    font-size: 24px;
+    font-size: 26px;
   }
   .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin-left: 16px;
   }
   .menu {
     z-index: 1200;
@@ -601,14 +614,6 @@ body.open .menu .dropbtn {
   .dropbtn {
     margin-left: 50px;
   }
-}
-@media (max-width: 700px) {
-.header {
-  min-height: 100vh;
-}
-.text-box h1 {
-  font-size: 16px;
-}
 }
 .hero-btn{
   display: inline-block;
@@ -647,11 +652,15 @@ body.open .menu .dropbtn {
 .about-header {
   padding-bottom: 60px;
 }
-.about-header h1 {
+.about-header h1, .about-header h2 {
   padding-top: 80px;
   text-align: center;
-  font-size: 60px;
+  font-size: 3.5rem;
   color: #100629;
+}
+.about-header h2 {
+  font-size: 2.5rem;
+  padding-top: 0px;
 }
 .about-header p {
   text-align: center;
@@ -709,79 +718,49 @@ body.open .menu .dropbtn {
 }
 
 /*--profiles--*/
-.container {
-  margin: 20px 40px;
-  color: #181818;
-}
-.proftitle {
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 25px;
-}
-.profiles {
+.team-row{
   display: flex;
-  text-align: center;
-  flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
-  justify-content: space-around;
-  margin: 20px auto; /* Центрируем по горизонтали и добавляем отступы сверху и снизу */
-  max-width: 1700px; /* Ограничиваем максимальную ширину контейнера */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
 }
 
-.profile {
-  flex-basis: calc(33.33% - 20px); /* Устанавливаем ширину элемента, с учетом отступов между элементами */
-  margin-bottom: 130px; /* Отступ между элементами внизу */
-}
-.profile .profile-img {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 0%;
-  object-fit: cover;
-}
-.user-name {
-  margin-top: 15px;
-  font-size: 30px;
-}
-.profile h5 {
-  font-size: 18px;
-  font-weight: 100;
-  letter-spacing: 0.5px;
-  color: #8d8d8d;
-}
-.profile p{
-  font-size: 16px;
-  margin-top: 25px;
+.member {
+  flex: 1 1 250px;
+  margin: 20px;
   text-align: center;
+  padding: 20px 10px;
+  cursor: pointer;
+  max-width: 300px;
+  transition: all 0.3s;
 }
-@media only screen and (max-width: 1150px) {
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .profile p {
-    text-align: center;
-    margin: 20px 60px 80px 60px;
-    font-size: 16px;
-  }
-  .user-name {
-    font-size: 26px;
-  }
-  .profile h5 {
-    font-size: 16px;
-  }
+
+.member:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 5%;
+  transform: translateY(-10px);
 }
-@media only screen and (max-width: 900px) {
-  .profiles {
-    margin: 20px 0;
-    flex-direction: column;
-  }
-  .profile p {
-    margin: 20px 10px 40px 10px;
-  }
-  .profile .profile-img {
-    height: 300px;
-    width: 300px;
-  }
+
+.member img{
+  display: block;
+  width: 190px; height: 190px;
+  object-fit: cover;
+  border: 4px solid #7b35aa;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.member h2{
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #7b35aa;
+  margin: 15px 0;
+}
+
+.member p{
+  font-size: 15px;
+  color: #838383;
+  line-height: 1.6;
 }
 /*---footer---*/
 
@@ -854,7 +833,7 @@ body.open .menu .dropbtn {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url("images/wave.png");
+  background: url("../images/wave.png");
   background-size: 1000px 100px;
   z-index: 998;
 }
