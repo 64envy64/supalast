@@ -840,7 +840,7 @@ h1 {
 	text-align: center;
 }
 .btn {
-	background-color: var(--fg);
+	background-color: #7118ab;
 	border-radius: 0.25em;
 	color: var(--bg);
 	cursor: pointer;
@@ -851,7 +851,7 @@ h1 {
 	-webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
-	background-color: hsl(var(--hue),10%,50%);
+	background-color: #ffa405;
 }
 .btn-group {
 	display: flex;
@@ -898,7 +898,7 @@ h1 {
 	line-height: 2.4;
 }
 .timeline__dot {
-	background-color: #524FD5;
+	background-color: #7118ab;
 	border-radius: 50%;
 	display: inline-block;
 	flex-shrink: 0;
@@ -909,7 +909,7 @@ h1 {
 	height: 0.75em;
 }
 .timeline___dot {
-  background-color: #524FD5;
+  background-color: #7118ab;
   border-radius: 50%;
   display: inline-flex; 
   justify-content: center; 

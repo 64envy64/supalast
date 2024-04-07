@@ -872,7 +872,7 @@ animation: none;
   display: inline-block;
 }
 .tab-container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto 3rem auto;
 }
 .tab-filter-container {
@@ -916,7 +916,7 @@ animation: none;
   height: 100%;
   position: absolute;
   padding: 1.5rem; 
-  transform: translateY(100%);
+  transform: translateY(110%);
   background: var(--white-light);
   border-radius: 10px;
   transition: transform 0.35s ease-in-out;
@@ -929,7 +929,7 @@ animation: none;
   text-align: center;
 }
 .tab-img {
-  max-width: 80%;
+  max-width: 75%;
   height: auto; 
   display: block; 
   border-radius: 15px; 

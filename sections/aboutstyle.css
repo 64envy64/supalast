@@ -237,7 +237,7 @@ transition: opacity 1s ease-out;
 .spinner {
 margin-bottom: 30px;
 border: 4px solid rgba(0, 0, 0, 0.1);
-border-top: 4px solid #524FD5;
+border-top: 4px solid #7118ab;
 border-radius: 50%;
 width: 40px;
 height: 40px;
@@ -289,7 +289,7 @@ opacity: 0;
 }
 }
 .sub-header {
-  min-height: 55vh;
+  height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(2, 4, 14, 0.685), rgba(2, 4, 14, 0.418)), url(../images/o-nas.jpg);
   background-position: center;
@@ -302,7 +302,7 @@ opacity: 0;
 
 .sub-header h1 {
   position: absolute;
-  top: 20%;
+  top: 30%;
   font-size: 5vw;
   font-weight: 600;
   color: #f1f1f1;
@@ -313,7 +313,7 @@ opacity: 0;
 }
 @media screen and (max-width: 768px) {
   .sub-header h1 {
-    font-size: 14vw;
+    font-size: 13vw;
     width: 90%; 
     padding-left: 1em; 
   }
@@ -696,15 +696,10 @@ body.open .menu .dropbtn {
 }
 
 /* Применяем стили к каждому тултипу */
-.facilities li[data-tooltip]:hover + .tooltip {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Устанавливаем текст тултипа на основе атрибута data-tooltip */
-.facilities li[data-tooltip]:hover + .tooltip::before {
-  content: attr(data-tooltip);
-}
+.tooltip-item:hover + .tooltip {
+   opacity: 1;
+   pointer-events: auto;
+  }
 
 .textt {
   width: 100%;
@@ -725,7 +720,7 @@ body.open .menu .dropbtn {
   width: 90%;
   margin: auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 .about-header h1 {
@@ -761,7 +756,7 @@ body.open .menu .dropbtn {
 }
 
 .about-col h1 {
-  color: #543fb4;
+  color: #7118ab;
   font-size: 46px;
   margin-bottom: 10px;
 }
@@ -776,7 +771,7 @@ body.open .menu .dropbtn {
   align-items: center;
   flex-wrap: wrap;
   gap: 100px 120px;
-  padding: 100px 50px;
+  padding: 150px 50px;
 }
 .facilities {
   color: #000000;
@@ -910,6 +905,11 @@ body.open .menu .dropbtn {
   text-align: center;
   color: #100629;
 }
+@media screen and (max-width: 768px) {
+  .num-header h1 {
+    font-size: 50px;
+  }
+}
 .containerr {
   display: flex;
   align-items: center;
@@ -970,13 +970,18 @@ body.open .menu .dropbtn {
   transition-delay: 0.1s; 
 }
 .slider {
-	display:flex;
-	gap:1em;
-	margin:0 auto;
-	width:calc(80% - 2em);
-	overflow-x:auto;
-	padding: 50px 0px 20px 0px;
+	display: flex;
+	gap: 1em;
+	margin: 0 auto;
+	width: calc(70% - 2em);
+	overflow-x: auto;
+	padding: 25px 0px 20px 0px;
 	scroll-snap-type: x mandatory;
+}
+@media screen and (max-width: 768px){
+  .slider {
+    width: 80%;
+  }
 }
 .slider .slide {
 	position:relative;
@@ -1032,8 +1037,12 @@ body.open .menu .dropbtn {
 }
 .slider::-webkit-scrollbar-thumb {
 	background:#aaa;
-	border-radius:5px;
+	border-radius: 5px;
 	cursor:pointer;
+  transition: all 1s;
+}
+.slider::-webkit-scrollbar-thumb:hover {
+  background: #ffa405;
 }
 a {
   text-decoration: none;
@@ -1090,7 +1099,7 @@ a {
 /* Адаптация для мобильных устройств */
 @media only screen and (max-width: 767px) {
   .text {
-    font-size: 26vw;
+    font-size: 23vw;
     width: 80%;
     left: 10%;
   }
@@ -1100,7 +1109,7 @@ a {
   }
   
   .containerr span {
-    font-size: 6vw;
+    font-size: 5.5vw;
   }
 }
 

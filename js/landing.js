@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // TYPING EFFECT
   const dynamicText = document.querySelector("h1 span");
-  const words = ["KNOWLEDGE", "EDUCATION", "Wisdom", "Everything"];
+  const words = ["LORE", "EDUCATION", "Wisdom", "EVENTS"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
