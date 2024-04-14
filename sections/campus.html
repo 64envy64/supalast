@@ -62,16 +62,14 @@
             <a href="about.html">О AIS</a>
             <a href="staffmain.html">Наша команда</a>
             <a href="#">О кампусе</a>
-            <a href="#">Внутренняя инфраструктура</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Анкета</a>
+            <a href="stages.html">Этапы</a>
             <a href="#">Гранты</a>
             <a href="#">Стоимость обучения</a>
-            <a href="#">Подменю 4</a>
           </div>
         </div>
         <div class="dropdown">
@@ -88,9 +86,9 @@
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Правила школы</a>
+            <a href="rules.html">Правила школы</a>
             <a href="#">Политика обработки личных данных</a>
-            <a href="#">Подменю 3</a>
+            <a href="documents.html">Документы</a>
             <a href="#">Подменю 4</a>
           </div>
         </div>
@@ -145,11 +143,13 @@ $(document).click(function(){
 </section>
 
 <section class="about">
+  <!--
   <h1 class="about-title">О кампусе</h1>
   <p class="about-desc">Школа построена из экологически чистого материала, соответствует стандартам качества. <br>
     Внутренний интерьер включает
     в себя учебные кабинеты, зоны для отдыха и творчества. Много зелени, естественное освещение.
   </p>
+  -->
 </section>
 
 <section class="galleryslide">
@@ -222,12 +222,6 @@ $(document).click(function(){
   </div>
   </section>
 
-<div class="prlx"><img src='image/parallax1.jpg' alt=''><span class="legende">image #1</span></div>
-<div class="prlx"><img src='image/parallax2.jpg' alt=''><span class="legende">image #2</span></div>
-<div class="prlx"><img src='image/parallax7.jpg' alt=''><span class="legende">image #3</span></div>
-<div class="prlx"><img src='image/parallax4.jpg' alt=''><span class="legende">image #4</span></div>
-<div class="prlx"><img src='image/parallax5.jpg' alt=''><span class="legende">image #5</span></div>
-<div class="prlx"><img src='image/parallax6.jpg' alt=''><span class="legende">image #6</span></div>
 
   <section class="home container" id="home">
     <div class="home-text">
@@ -239,32 +233,32 @@ $(document).click(function(){
     <div class='gallery-track'>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/kL3u4Tqfn1s'>
+          <img src='image/parallax1.jpg'>
         </div>
       </div>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/yVUQlyRlJSw'>
+          <img src='image/parallax2.jpg'>
         </div>
       </div>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/7H77FWkK_x4'>
+          <img src='image/parallax7.jpg'>
         </div>
       </div>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/r7YZXv5f5cc'>
+          <img src='image/parallax4.jpg'>
         </div>
       </div>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/KQ75n3P8EJA'>
+          <img src='image/parallax5.jpg'>
         </div>
       </div>
       <div class='card'>
         <div class='card-image-wrapper'>
-          <img src='https://source.unsplash.com/psdV2Rl-GvU'>
+          <img src='image/parallax6.jpg'>
         </div>
       </div>
       <div class='card'>
@@ -299,6 +293,30 @@ $(document).click(function(){
       </div>
     </div>
   </main>
+
+  
+<section class="cta">
+  <h1>Получите качественное международное образование уже сейчас</h1>
+  <div class="background-img"></div>
+  <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
 <!-- Back to top button -->
 <a id="back-to-top"></a>
 

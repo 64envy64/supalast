@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
     easing: 'ease-in-out'
   };
 
+  ScrollReveal().reveal('.text-box h1', { ...revealOptions, origin: 'bottom', distance: '40px', delay: 800, duration: 1000 });
+  ScrollReveal().reveal('.text-box p, .c-button', { 
+    delay: 1400, 
+    duration: 500,
+    opacity: 0, 
+    easing: 'ease-in-out'
+});
+  ScrollReveal().reveal('#arka11', { ...revealOptions, origin: 'bottom', distance: '20px', delay: 500 });
+  ScrollReveal().reveal('#arka22', { ...revealOptions, origin: 'bottom', distance: '20px', delay: 500 });
   ScrollReveal().reveal('.course h2', { ...revealOptions, origin: 'top', distance: '20px' });
   ScrollReveal().reveal('.campus h2', { ...revealOptions, origin: 'top', distance: '50px' });
   ScrollReveal().reveal('#firstimg', { ...revealOptions, origin: 'left' });

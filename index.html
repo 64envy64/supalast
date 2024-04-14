@@ -20,6 +20,8 @@
 <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
+    <script src="js/bcktotoppreloader.js"></script>
+    <script src="js/scrollrevealelmnts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Preloader -->
         <div class="preloader">
@@ -31,7 +33,7 @@
       <section class="header">
         <video autoplay muted loop id="backgroundVideo">
           <source src="images/backgroundvideo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+          Ваш браузер не поддерживает видео.
         </video>
         <div class="logo-container">
           <a href="index.html">
@@ -68,20 +70,18 @@
               <a href="sections/about.html">О AIS</a>
               <a href="sections/staffmain.html">Наша команда</a>
               <a href="sections/campus.html">О кампусе</a>
-              <a href="#">Внутренняя инфраструктура</a>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="/sections/stages.html">Этапы</a>
-              <a href="#">Гранты</a>
+              <a href="sections/stages.html">Этапы</a>
+              <a href="sections/grants.html">Гранты</a>
               <a href="#">Стоимость обучения</a>
-              <a href="#">Подменю 4</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+            <button class="dropbtn" style="animation-delay: 0.2s">Академическая <i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
               <a href="#">Подменю 1</a>
               <a href="#">Подменю 2</a>
@@ -94,7 +94,7 @@
           <div class="dropdown">
             <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
             <div class="dropdown-content">
-              <a href="#">Правила школы</a>
+              <a href="sections/rules.html">Правила школы</a>
               <a href="#">Политика обработки личных данных</a>
               <a href="/sections/documents.html">Документы</a>  
               <a href="#">Подменю 4</a>
@@ -153,8 +153,8 @@ $(document).ready(function(){
           </div>
       </section>
       <div class="arch-container">
-        <img src="/sections/image/arka.png" alt="Arka 1" id="arka1">
-        <img src="/sections/image/arka2.png" alt="Arka 2" id="arka2">
+        <img src="/sections/image/arka.png" alt="Arka 1" id="arka11">
+        <img src="/sections/image/arka2.png" alt="Arka 2" id="arka22">
       </div>
       <section class="home">
       <div class="text-box">
@@ -196,19 +196,19 @@ $(document).ready(function(){
   
     <div class="row">
         <div class="campus-col" id="firstimg">
-            <img src="images/1.jpg">
+            <img src="images/1.jpg" alt="entrance">
             <div class="layer">
                 <h4>ВХОД</h4>
         </div>
     </div>
     <div class="campus-col" id="secondimg">
-        <img src="images/2.jpg">
+        <img src="images/2.jpg" alt="hall">
         <div class="layer">
             <h4>ХОЛЛ</h4>
         </div>
     </div>
     <div class="campus-col" id="thirdimg">
-        <img src="images/3.jpg">
+        <img src="images/3.jpg" alt="yard">
         <div class="layer">
             <h4>ДВОР</h4>
         </div>
@@ -263,15 +263,15 @@ $(document).ready(function(){
 <div class="wrapper">
   <i id="left" class="fa-solid fa-angle-left"></i>
   <div class="carousel">
-    <img src="images/img-1.jpg" alt="img" draggable="false">
-    <img src="images/img-2.jpg" alt="img" draggable="false">
-    <img src="images/img-3.jpg" alt="img" draggable="false">
-    <img src="images/img-4.jpg" alt="img" draggable="false">
-    <img src="images/img-5.jpg" alt="img" draggable="false">
-    <img src="images/img-6.jpg" alt="img" draggable="false">
-    <img src="images/img-7.jpg" alt="img" draggable="false">
-    <img src="images/img-8.jpg" alt="img" draggable="false">
-    <img src="images/img-9.jpg" alt="img" draggable="false">
+    <img src="images/img-1.jpg" alt="galleryimg1" draggable="false">
+    <img src="images/img-2.jpg" alt="galleryimg2" draggable="false" loading="lazy">
+    <img src="images/img-3.jpg" alt="galleryimg3" draggable="false" loading="lazy">
+    <img src="images/img-4.jpg" alt="galleryimg4" draggable="false" loading="lazy">
+    <img src="images/img-5.jpg" alt="galleryimg5" draggable="false" loading="lazy">
+    <img src="images/img-6.jpg" alt="galleryimg6" draggable="false" loading="lazy">
+    <img src="images/img-7.jpg" alt="galleryimg7" draggable="false" loading="lazy">
+    <img src="images/img-8.jpg" alt="galleryimg8" draggable="false" loading="lazy">
+    <img src="images/img-9.jpg" alt="galleryimg9" draggable="false" loading="lazy">
   </div>
   <i id="right" class="fa-solid fa-angle-right"></i>
 </div>
@@ -288,12 +288,12 @@ $(document).ready(function(){
 <section class="slidebody">
   <div class="logos">
     <div class="logos-slide" id="carousel-container">
-      <img src="images/nis.png" alt="logo">
-      <img src="images/CIS.png" alt="logo">
-      <img src="images/logo-zhu.png" alt="logo">
-      <img src="images/part.png" alt="logo">
-      <img src="images/logo-1.png" alt="logo">
-      <img src="images/logo-2.png" alt="logo">
+      <img src="images/nis.png" alt="nis">
+      <img src="images/CIS.png" alt="cis">
+      <img src="images/logo-zhu.png" alt="zhubanov">
+      <img src="images/part.png" alt="part" loading="lazy">
+      <img src="images/logo-1.png" alt="econetwork" loading="lazy">
+      <img src="images/logo-2.png" alt="mcavendish" loading="lazy">
     </section>
   </div>
   </div>
@@ -352,8 +352,6 @@ $(document).ready(function(){
     <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
   </footer>
   <script defer src="js/landing.js"></script>
-  <script src="js/bcktotoppreloader.js"></script>
-  <script src="js/scrollrevealelmnts.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script defer src="js/gallery.js"></script>

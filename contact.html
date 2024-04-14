@@ -62,16 +62,14 @@
             <a href="sections/about.html">О AIS</a>
             <a href="sections/staffmain.html">Наша команда</a>
             <a href="sections/campus.html">О кампусе</a>
-            <a href="#">Внутренняя инфраструктура</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Анкета</a>
+            <a href="/sections/stages.html">Этапы</a>
             <a href="#">Гранты</a>
             <a href="#">Стоимость обучения</a>
-            <a href="#">Подменю 4</a>
           </div>
         </div>
         <div class="dropdown">
@@ -88,9 +86,9 @@
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Правила школы</a>
+            <a href="sections/rules.html">Правила школы</a>
             <a href="#">Политика обработки личных данных</a>
-            <a href="#">Подменю 3</a>
+            <a href="sections/documents.html">Документы</a>
             <a href="#">Подменю 4</a>
           </div>
         </div>
@@ -141,14 +139,14 @@ $(document).click(function(){
       <div>
         <i class="fa fa-home"></i>
         <span>
-          <h5>Ораза-Татеулы 13А</h5>
+          <h5><strong style="color: #100629;">Ораза-Татеулы 13А</strong></h5>
           <p>Казахстан, Актобе KZ</p>
         </span>
     </div>
     <div>
       <i class="fa fa-phone"></i>
       <span>
-        <h5>+7 707 750 6666</h5>
+        <h5><strong style="color: #100629;">+7 707 750 6666</strong></h5>
         <p>Понедельник - Пятница<br>
            09:00 по 18:00</p>
       </span>
@@ -156,7 +154,7 @@ $(document).click(function(){
     <div>
       <i class="fa fa-envelope-o"></i>
       <span>
-        <h5>info@akbobek.kz</h5>
+        <h5><strong style="color: #100629;">info@akbobek.kz</strong></h5>
         <p>Почта школы</p>
       </span>
     </div>
@@ -169,9 +167,48 @@ $(document).click(function(){
       <div class="contact-col">
         <h1>Связаться с нами</h1>
         <p>Ответим в любое время с 09:00 по 18:00 в будние дни.<br>Для того чтобы написать лично - нажмите на кнопку ниже</p>
-          <a href="" class="hero-btn">НАПИСАТЬ НАМ</a>
+        <button class="c-button c-button--gooey"> НАПИСАТЬ НАМ
+          <div class="c-button__blobs">
+          <div></div>
+          <div></div>
+          <div></div>
+          </div>
+        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+              <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+        </div>
       </div>
  </section>
+
+ <section class="cta">
+  <h1>Получите качественное международное образование уже сейчас</h1>
+  <div class="background-img"></div>
+  <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
 <!-- Back to top button -->
 <a id="back-to-top"></a>
 
