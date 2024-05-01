@@ -30,18 +30,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }, duration);
   }
 
+  $(document).ready(function() {
   /*-- BACKTOTOP --*/
-var btn = $('#back-to-top');
+  let btn = $('#back-to-top');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+  
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0}, '300');
+  });
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 900)
+})
+
+gsap.ticker.lagSmoothing(0)

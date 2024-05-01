@@ -16,8 +16,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
     <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Preloader -->
@@ -27,10 +29,10 @@
               <h2>Being first, having the best</h2>
           </div>
       </div> 
-    <section class="sub-header">
+    <section class="sub-header" id="contacts">
       <div class="logo-container">
-        <a href="index.html">
-          <img src="images/logocolor.png" alt="Logo" class="logo">
+        <a href="en.html">
+          <img src="images/logocolor.webp" alt="Logo" class="logo">
         </a>
       </div>
       <div class="phone">
@@ -46,7 +48,7 @@
           <i class="fa-solid fa-angle-down lang-arrow"></i>
         </button>
         <div class="lang-dropdown-list">
-          <a href="#" class="lang-dropdown-item">ENGLISH</a>
+          <a href="#contacts" onclick="lenis.scrollTo('#contacts')" class="lang-dropdown-item">ENGLISH</a>
           <a href="contact.html" class="lang-dropdown-item">РУССКИЙ</a>
           <a href="contactkz.html" class="lang-dropdown-item">ҚАЗАҚША</a>
         </div>
@@ -62,7 +64,6 @@
             <a href="sections/abouten.html">About us</a>
             <a href="sections/staffmainen.html">Our team</a>
             <a href="sections/campusen.html">Campus</a>
-            <a href="#">Internal infrastructure</a>
           </div>
         </div>
         <div class="dropdown">
@@ -71,11 +72,11 @@
             <a href="/sections/stagesen.html">Stages</a>
             <a href="#">Grants</a>
             <a href="#">Education fee</a>
-            <a href="#">Подменю 4</a>
           </div>
         </div>
+        <!--
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.2s">Employee<i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.2s">Academic<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
             <a href="#">Подменю 1</a>
             <a href="#">Подменю 2</a>
@@ -83,15 +84,15 @@
             <a href="#">Подменю 4</a>
           </div>
         </div>
-        <a href="#" class="dropbtn" style="animation-delay: 0.4s">News</a>
-        <a href="#" class="dropbtn" style="animation-delay: 0.5s">Contacts</a>
+        -->
+        <a href="en.html#news" class="dropbtn" style="animation-delay: 0.4s">News</a>
+        <a href="#contacts" onclick="lenis.scrollTo('#contacts')" class="dropbtn" style="animation-delay: 0.5s">Contacts</a>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.5s">Important<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Rules</a>
-            <a href="#">Политика обработки личных данных</a>
-            <a href="/sections/documents.html">Documents</a>  
-            <a href="#">Подменю 4</a>
+            <a href="sections/rulesen.html">Rules</a>
+            <a href="sections/rulesen.html">Policy of personal data processing</a>
+            <a href="/sections/documentsen.html">Documents</a>
           </div>
         </div>
       </nav>
@@ -141,14 +142,14 @@ $(document).click(function(){
       <div>
         <i class="fa fa-home"></i>
         <span>
-          <h5>Oraza-Tateuly 13A</h5>
+          <h5><strong style="color: #100629;">Oraza-Tateuly 13A</strong></h5>
           <p>Kazakhstan, Aktobe KZ</p>
         </span>
     </div>
     <div>
       <i class="fa fa-phone"></i>
       <span>
-        <h5>+7 707 750 6666</h5>
+        <h5><strong style="color: #100629;">+7 707 750 6666</strong></h5>
         <p>Monday - Friday<br>
            09:00 to 18:00</p>
       </span>
@@ -156,7 +157,7 @@ $(document).click(function(){
     <div>
       <i class="fa fa-envelope-o"></i>
       <span>
-        <h5>info@akbobek.kz</h5>
+        <h5><strong style="color: #100629;">info@akbobek.kz</strong></h5>
         <p>School email</p>
       </span>
     </div>
@@ -169,9 +170,34 @@ $(document).click(function(){
       <div class="contact-col">
         <h1>Contact us</h1>
         <p>We will reply anytime between 09:00 and 18:00 on weekdays.<br>To write personally - click on the button below</p>
-          <a href="" class="hero-btn">WRITE US</a>
+          <a href="https://instagram.com/ais_aqbobek/" class="hero-btn">WRITE US</a>
       </div>
  </section>
+
+ <section class="cta">
+  <h1>Get a quality international education now</h1>
+  <div class="background-img"></div>
+  <a href="https://instagram.com/ais_aqbobek/">
+    <button class="c-button c-button--gooey"> BECOME A PART OF AIS
+      <div class="c-button__blobs">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </button>
+  </a>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
 <!-- Back to top button -->
 <a id="back-to-top"></a>
 
@@ -201,7 +227,7 @@ $(document).click(function(){
       <li class="menu__item"><a class="menu__link" href="sections/abouten.html">About us</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Important</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Grants</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Contacts</a></li>
+      <li class="menu__item"><a class="menu__link" href="#contacts" onclick="lenis.scrollTo('#contacts')">Contacts</a></li>
     </ul>
     <p>&copy; 2024 Aqbobek International School | All rights reserved</p>
   </footer>

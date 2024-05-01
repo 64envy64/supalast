@@ -44,17 +44,17 @@ resize: none !important;
   .phone-link {
   display: flex;
   align-items: center;
-  color: #9e9e9e; /* Замените на ваш цвет текста */
+  color: #9e9e9e; 
   text-decoration: none;
-  margin-right: 20px; /* Расстояние между номером и переменной языка */
+  margin-right: 20px; 
   transition: color 0.5s ease;
   }
   .phone-link:hover {
-  color: #e4e4e4; /* Замените на ваш цвет при наведении */
+  color: #e4e4e4;
   }
   
   .phone .fa-phone-flip {
-  margin-right: 10px; /* Расстояние между иконкой телефона и номером */
+  margin-right: 10px;
   font-size: 20px;
   }
   .lang-dropdown-btn .fa-earth-americas {
@@ -116,7 +116,7 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   bottom: 30px;
   right: 30px;
   transition: background-color .3s, 
-    opacity .5s, visibility .5s, color .4s;
+    opacity .5s, visibility .5s, color .4s, transform 0.4s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -137,6 +137,7 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   #back-to-top:active {
   background-color: #e2e2e2;
+  transform: scale(0.9);
   }
   #back-to-top.show {
   opacity: 1;
@@ -150,6 +151,25 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     #back-to-top::after {
       line-height: 44px;
     }
+  }
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
   }
 body{
   background: #f0f0f0;
@@ -318,15 +338,26 @@ opacity: 0;
 }
 }
 .sub-header {
-height: 45vh;
-width: 100%;
-background-image: linear-gradient(rgba(2, 4, 14, 0.685),rgba(2, 4, 14, 0.418)), url(../images/documents.jpg);
-background-position: center;
-background-size: cover;
-text-align: center;
-position: relative;
-overflow: hidden;
-color: #fff;
+  min-height: 55vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(2, 4, 14, 0.685),rgba(2, 4, 14, 0.418)), url(../images/documents.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  }
+  .sub-header h1 {
+    font-size: 7vw;
+    font-weight: 600;
+    color: #f1f1f1;
+    margin-top: 17rem;
+  }
+@media screen and (max-width: 468px) {
+  .sub-header h1 {
+    font-size: 10vw;
+  }
 }
 .logo-container {
   position: fixed;
@@ -435,12 +466,13 @@ padding-left: 25px;
 }
 .navbar-burger {
 z-index: 1501;
-top: 0;
-left: 0;
+top: 30px;
+left: 20px;
 display: grid;
 place-items: center;
-width: 88px;
-height: 150px;
+width: 44px;
+height: 75px;
+pointer-events: visible;
 background-image: url("../assets/menu.svg");
 background-repeat: no-repeat;
 filter: brightness(70%);
@@ -497,9 +529,9 @@ align-items: flex-start;
   position: fixed;
   min-width: 160px;
   z-index: 1;
-  left: 280px; /* Установите фиксированное расстояние здесь */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-50%); /* Смещение вверх на половину высоты элемента */
+  left: 280px; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .menu .dropbtn::after {
 content: "";
@@ -519,13 +551,13 @@ transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.3s backwards;
+  animation: appear 0.2s backwards;
   }
   
   @keyframes appear {
   0% {
     opacity: 0;
-    translate: 0 50px;
+    translate: 0 20px;
   }
   100% {
     opacity: 1;
@@ -540,13 +572,14 @@ body.open .menu .dropbtn {
   position: absolute;
   min-width: 160px;
   z-index: 1501;
-  left: 100%; /* Позиционирование выпадающего меню справа */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-40%); /* Смещение вверх на половину высоты элемента */
+  left: 100%; 
+  top: 50%; 
+  transform: translateY(-40%); 
 }
 .dropdown-content a {
-  color: white; /* Установи цвет текста на белый */
-  padding: 20px 16px;
+  color: white; 
+  font-family: "Steppe";
+  padding: 20px 34px;
   width: 200px;
   text-align: left;
   text-decoration: none;
@@ -559,7 +592,8 @@ body.open .menu .dropbtn {
 /* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
-  color: white; /* Установите цвет текста на белый */
+  font-family: "Steppe";
+  color: white;
   padding: 16px;
   font-size: 40px;
   border: none;
@@ -574,7 +608,7 @@ body.open .menu .dropbtn {
 }
 .dropdown .fa-chevron-right {
   font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
+  margin-left: 20px;
   transition: all 0.3s ease;
 }
 .dropdown:hover .fa-chevron-right,
@@ -585,31 +619,33 @@ body.open .menu .dropbtn {
   .dropbtn {
     font-size: 18px;
     margin-left: 2px;
+    padding: 12px;
   }
   .dropdown-content a{
     font-size: 16px;
     margin-left: -75px;
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 16px;
+    padding: 12px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
+    padding: 14px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .dropbtn {
-    font-size: 24px;
+    font-size: 26px;
   }
   .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin-left: 16px;
   }
   .menu {
     z-index: 1200;
@@ -629,163 +665,6 @@ body.open .menu .dropbtn {
   .dropbtn {
     margin-left: 50px;
   }
-}
-/* Добавьте стили для кнопки */
-.dropbtn {
-  position: relative;
-  color: white; 
-  padding: 16px;
-  font-size: 40px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-left: 4em;
-}
-.dropbtn:hover, .dropbtn:focus {
-  background-color: transparent;
-}
-.dropdown .fa-chevron-right {
-  font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
-  transition: all 0.3s ease;
-}
-.dropdown:hover .fa-chevron-right,
-.dropdown .dropbtn:focus .fa-chevron-right {
-  transform: translateX(5px);
-}
-@media screen and (max-width: 400px) {
-  .dropbtn {
-    font-size: 18px;
-    margin-left: 2px;
-  }
-  .dropdown-content a{
-    font-size: 16px;
-    margin-left: -75px;
-    padding: 12px 16px;
-  }
-}
-@media (min-width: 401px) and (max-width: 700px) {
-  .dropdown-content a {
-    font-size: 20px;
-    margin-left: -30px;
-    padding: 12px 16px;
-  }
-  .dropbtn {
-    font-size: 22px;
-    margin-left: 20px;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 1200px) {
-  .dropbtn {
-    font-size: 24px;
-  }
-  .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
-  }
-  .menu {
-    z-index: 1200;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: flex start;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%; /* Сохраняет высоту */
-    background: rgba(0, 0, 0, 0.959);
-    opacity: 0;
-    overflow: hidden;
-    visibility: hidden;
-    transition: 0.5s;
-  }
-  .dropbtn {
-    margin-left: 50px;
-  }
-}
-@media (max-width: 700px) {
-.header {
-  min-height: 100vh;
-}
-.text-box h1 {
-  font-size: 16px;
-}
-}
-.text-box {
-  width: 100%;
-  color: #f7f7f7;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-.text-box h1 {
-  font-size: 85px;
-  color: #ffffff;
-  font-weight: 600;
-}
-.text-box h1 span {
-color: #6f53ed;
-position: relative;
-}
-.text-box h1 span::before {
-content: "";
-height: 50px;
-width: 2px;
-position: absolute;
-top: 50%;
-right: -8px;
-background: #6f53ed;
-transform: translateY(-45%);
-animation: blink 0.7s infinite;
-}
-.textbox h1 span.stop-blinking::before {
-animation: none;
-}
-@keyframes blink {
-50% { opacity: 0 }
-}
-
-.text-box p{
-  margin: 10px 0 40px;
-  font-size: 16px;
-  color: #a8a8a8;
-}
-.hero-btn{
-  display: inline-block;
-  text-decoration: none;
-  color: #000000;
-  border: 1px solid #20202098;
-  border-radius: 5px;
-  padding: 12px 34px;
-  font-size: 14px;
-  background: none;
-  position: relative;
-  cursor: pointer;
-  transition: 0.8s;
-  overflow: hidden;
-}
-.hero-btn:hover{
-  background: #524FD5;
-  color: #fff;
-  border: 1px solid #00000000;
-}
-.hero-btn::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: #524FD5;
-  z-index: -1;
-  transition: 0.7s;
-  bottom: 0;
-  border-radius: 50% 50% 0 0;
-}
-.hero-btn:hover::before{
-  height: 180%;
 }
 
 /*----documentstab----*/
@@ -968,10 +847,10 @@ animation: none;
     padding: 1rem 1rem;
   }
   .tab-heading {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .paragraph {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 1024px) {

@@ -105,7 +105,7 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   bottom: 30px;
   right: 30px;
   transition: background-color .3s, 
-    opacity .5s, visibility .5s, color .4s;
+    opacity .5s, visibility .5s, color .4s, transform 0.4s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -126,6 +126,7 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
   #back-to-top:active {
   background-color: #e2e2e2;
+  transform: scale(0.9);
   }
   #back-to-top.show {
   opacity: 1;
@@ -139,6 +140,25 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     #back-to-top::after {
       line-height: 44px;
     }
+  }
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
   }
 body{
   background: #f0f0f0;
@@ -262,30 +282,30 @@ color: #00000096;
 transform: rotate(180deg);
 }
 .preloader {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 5000;
-opacity: 1;
-transition: opacity 1s ease-out;
-}
-
-.spinner {
-margin-bottom: 30px;
-border: 4px solid rgba(0, 0, 0, 0.1);
-border-top: 4px solid #524FD5;
-border-radius: 50%;
-width: 40px;
-height: 40px;
-animation: spin 0.8s linear infinite;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  }
+  
+  .spinner {
+  margin-bottom: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #7118ab;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+  }
 
 @keyframes spin {
 0% { transform: rotate(0deg); }
@@ -534,13 +554,14 @@ padding-left: 25px;
 }
 .navbar-burger {
 z-index: 1501;
-top: 0;
-left: 0;
+top: 30px;
+left: 20px;
 display: grid;
 place-items: center;
-width: 88px;
-height: 150px;
-background-image: url("/assets/menu.svg");
+width: 44px;
+height: 75px;
+pointer-events: visible;
+background-image: url("./assets/menu.svg");
 background-repeat: no-repeat;
 filter: brightness(70%);
 background-position: center;
@@ -550,7 +571,7 @@ transition: filter 0.3s;
 filter: brightness(100%);
 }
 body.open .navbar-burger {
-background-image: url("/assets/close.svg");
+background-image: url("./assets/close.svg");
 }
 .menu {
 z-index: 1200;
@@ -596,9 +617,9 @@ align-items: flex-start;
   position: fixed;
   min-width: 160px;
   z-index: 1;
-  left: 280px; /* Установите фиксированное расстояние здесь */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-50%); /* Смещение вверх на половину высоты элемента */
+  left: 280px; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .menu .dropbtn::after {
 content: "";
@@ -618,13 +639,13 @@ transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.3s backwards;
+  animation: appear 0.2s backwards;
   }
   
   @keyframes appear {
   0% {
     opacity: 0;
-    translate: 0 50px;
+    translate: 0 20px;
   }
   100% {
     opacity: 1;
@@ -639,13 +660,14 @@ body.open .menu .dropbtn {
   position: absolute;
   min-width: 160px;
   z-index: 1501;
-  left: 100%; /* Позиционирование выпадающего меню справа */
-  top: 50%; /* Выравнивание по середине кнопки */
-  transform: translateY(-40%); /* Смещение вверх на половину высоты элемента */
+  left: 100%; 
+  top: 50%; 
+  transform: translateY(-40%); 
 }
 .dropdown-content a {
-  color: white; /* Установи цвет текста на белый */
-  padding: 20px 16px;
+  color: white; 
+  font-family: "Steppe";
+  padding: 20px 34px;
   width: 200px;
   text-align: left;
   text-decoration: none;
@@ -658,7 +680,8 @@ body.open .menu .dropbtn {
 /* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
-  color: white; /* Установите цвет текста на белый */
+  font-family: "Steppe";
+  color: white;
   padding: 16px;
   font-size: 40px;
   border: none;
@@ -673,7 +696,7 @@ body.open .menu .dropbtn {
 }
 .dropdown .fa-chevron-right {
   font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
+  margin-left: 20px;
   transition: all 0.3s ease;
 }
 .dropdown:hover .fa-chevron-right,
@@ -684,31 +707,33 @@ body.open .menu .dropbtn {
   .dropbtn {
     font-size: 18px;
     margin-left: 2px;
+    padding: 12px;
   }
   .dropdown-content a{
     font-size: 16px;
     margin-left: -75px;
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 16px;
+    padding: 12px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
+    padding: 14px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
   .dropbtn {
-    font-size: 24px;
+    font-size: 26px;
   }
   .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin-left: 16px;
   }
   .menu {
     z-index: 1200;
@@ -728,129 +753,6 @@ body.open .menu .dropbtn {
   .dropbtn {
     margin-left: 50px;
   }
-}
-/* Добавьте стили для кнопки */
-.dropbtn {
-  position: relative;
-  color: white; /* Установите цвет текста на белый */
-  padding: 16px;
-  font-size: 40px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-left: 4em;
-}
-.dropbtn:hover, .dropbtn:focus {
-  background-color: transparent;
-}
-.dropdown .fa-chevron-right {
-  font-size: 15px;
-  margin-left: 25px; /* Регулируйте это значение для изменения расстояния стрелки от текста кнопки */
-  transition: all 0.3s ease;
-}
-.dropdown:hover .fa-chevron-right,
-.dropdown .dropbtn:focus .fa-chevron-right {
-  transform: translateX(5px);
-}
-@media screen and (max-width: 400px) {
-  .dropbtn {
-    font-size: 18px;
-    margin-left: 2px;
-  }
-  .dropdown-content a{
-    font-size: 16px;
-    margin-left: -75px;
-    padding: 12px 16px;
-  }
-}
-@media (min-width: 401px) and (max-width: 700px) {
-  .dropdown-content a {
-    font-size: 20px;
-    margin-left: -30px;
-    padding: 12px 16px;
-  }
-  .dropbtn {
-    font-size: 22px;
-    margin-left: 20px;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 1200px) {
-  .dropbtn {
-    font-size: 24px;
-  }
-  .dropdown-content a {
-    font-size: 24px;
-    margin-left: 10px;
-  }
-  .menu {
-    z-index: 1200;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: flex start;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%; /* Сохраняет высоту */
-    background: rgba(0, 0, 0, 0.959);
-    opacity: 0;
-    overflow: hidden;
-    visibility: hidden;
-    transition: 0.5s;
-  }
-  .dropbtn {
-    margin-left: 50px;
-  }
-}
-@media (max-width: 700px) {
-.header {
-  min-height: 100vh;
-}
-.text-box h1 {
-  font-size: 16px;
-}
-}
-.text-box {
-  width: 100%;
-  color: #f7f7f7;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-.text-box h1 {
-  font-size: 85px;
-  color: #ffffff;
-  font-weight: 600;
-}
-.text-box h1 span {
-color: #6f53ed;
-position: relative;
-}
-.text-box h1 span::before {
-content: "";
-height: 50px;
-width: 2px;
-position: absolute;
-top: 50%;
-right: -8px;
-background: #6f53ed;
-transform: translateY(-45%);
-animation: blink 0.7s infinite;
-}
-.textbox h1 span.stop-blinking::before {
-animation: none;
-}
-@keyframes blink {
-50% { opacity: 0 }
-}
-
-.text-box p{
-  margin: 10px 0 40px;
-  font-size: 16px;
-  color: #a8a8a8;
 }
 .hero-btn{
   display: inline-block;
@@ -898,12 +800,11 @@ animation: none;
   width: 100%;
 }
 .contact-us {
-  width: 30%; /* Ширина блока */
-  float: right; /* Разместить блок справа */
-  margin-top: 30px; /* Опциональный верхний отступ */
+  width: 30%; 
+  float: right; 
+  margin-top: 30px; 
 }
 
-/* Добавьте стили для .contact-col, если необходимо */
 .contact-col {
   margin-bottom: 30px;
 }
@@ -966,12 +867,12 @@ animation: none;
   }
 
   .contactcontent {
-    width: 100%; /* Занимает всю ширину на маленьких экранах */
-    padding-top: 30px; /* Опциональный верхний отступ */
+    width: 100%; 
+    padding-top: 30px; 
   }
 
   .contact-col {
-    flex-basis: 100%; /* Занимает всю ширину на маленьких экранах */
+    flex-basis: 100%; 
     margin: 50px;
   }
 }

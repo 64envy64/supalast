@@ -16,9 +16,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+      </head>
     <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Preloader -->
         <div class="preloader">
           <div class="spinner"></div>
@@ -26,10 +29,10 @@
               <h2>Быть первым, иметь лучшее</h2>
           </div>
       </div> 
-    <section class="sub-header">
+    <section class="sub-header" id="stages">
       <div class="logo-container">
         <a href="../index.html">
-          <img src="../images/logocolor.png" alt="Logo" class="logo">
+          <img src="../images/logocolor.webp" alt="Logo" class="logo">
         </a>
       </div>
       <div class="phone">
@@ -45,7 +48,7 @@
           <i class="fa-solid fa-angle-down lang-arrow"></i>
         </button>
         <div class="lang-dropdown-list">
-          <a href="#" class="lang-dropdown-item">РУССКИЙ</a>
+          <a href="#stages" onclick="lenis.scrollTo('#stages')" class="lang-dropdown-item">РУССКИЙ</a>
           <a href="#" class="lang-dropdown-item">ENGLISH</a>
           <a href="#" class="lang-dropdown-item">ҚАЗАҚША</a>
         </div>
@@ -71,8 +74,9 @@
             <a href="#">Стоимость обучения</a>
           </div>
         </div>
+        <!--
         <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="dropbtn" style="animation-delay: 0.2s"> Академические<i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
             <a href="#">Подменю 1</a>
             <a href="#">Подменю 2</a>
@@ -80,15 +84,15 @@
             <a href="#">Подменю 4</a>
           </div>
         </div>
-        <a href="#" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
+        -->
+        <a href="../index.html#news" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
         <a href="contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
             <a href="rules.html">Правила школы</a>
-            <a href="#">Политика обработки личных данных</a>
+            <a href="rules.html">Политика обработки личных данных</a>
             <a href="documents.html">Документы</a>
-            <a href="#">Подменю 4</a>
           </div>
         </div>
       </nav>
@@ -127,7 +131,6 @@ $(document).click(function(){
 </script>
 
 <!-- stages -->
-
 <svg display="none">
 	<symbol id="arrow">
 		<polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -135,7 +138,7 @@ $(document).click(function(){
 </svg>
 <h1>Этапы поступления в школу</h1>
 <div class="timeline-cont">
-    <div id="timeline" class="timeline">
+    <div id="timeline2" class="timeline2">
         <div class="btn-group">
             <button class="btn" type="button" data-action="expand">Показать все</button>
             <button class="btn" type="button" data-action="collapse">Закрыть</button>
@@ -175,7 +178,7 @@ $(document).click(function(){
             </div>
             <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
                 <div class="timeline__item-body-content">
-                  <img src="../images/aboutus.jpg">
+                  <img src="image/img4.jpg">
                     <p class="timeline__item-p">Прохождение вступительного тестирования и собеседования. Нам необходимо оценить уровень знаний учащихся для обеспечения наиболее подходящей образовательной среды</p>
                 </div>
             </div>
@@ -195,7 +198,7 @@ $(document).click(function(){
             </div>
             <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
                 <div class="timeline__item-body-content">
-                  <img src="image/stage1.jpg">
+                  <img src="image/img3.jpg">
                     <p class="timeline__item-p">Заключение договора (при положительном результате тестирования) с менеджером по регистрации. Заключающий этап отбора учащихся</p>
                 </div>
             </div>
@@ -215,7 +218,7 @@ $(document).click(function(){
             </div>
             <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
                 <div class="timeline__item-body-content">
-                  <img src="image/stage1.jpg">
+                  <img src="image/img5.jpg">
                     <p class="timeline__item-p">Оплата вступительного взноса и предоставление необходимых документов для зачисления - это ключевые шаги, чтобы стать частью нашего образовательного сообщества.</p>
                 </div>
             </div>
@@ -235,7 +238,7 @@ $(document).click(function(){
           </div>
           <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
               <div class="timeline__item-body-content">
-                <img src="../images/aboutus.jpg">
+                <img src="../images/documents.jpg">
                   <p class="timeline__item-p">Зачисление ученика в школу. Это означает, что все необходимые процедуры были успешно выполнены, и теперь ваш ребенок готов присоединиться к нашему образовательному сообществу, где он получит все необходимые знания и навыки для успешного развития.
                     <mark style="background-color: #ffa405; border-radius: 5px; padding: 1px 4px 1px 4px;">Мы рады приветствовать вас в нашей школе!</mark></p>
               </div>
@@ -247,6 +250,7 @@ $(document).click(function(){
 <section class="cta">
   <h1>Получите качественное международное образование уже сейчас</h1>
   <div class="background-img"></div>
+  <a href="https://instagram.com/ais_aqbobek">
   <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
     <div class="c-button__blobs">
     <div></div>
@@ -254,6 +258,7 @@ $(document).click(function(){
     <div></div>
     </div>
   </button>
+</a>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
     <defs>
       <filter id="goo">
@@ -295,7 +300,7 @@ $(document).click(function(){
       <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Родителям</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Гранты</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      <li class="menu__item"><a class="menu__link" href="../contact.html">Контакты</a></li>
     </ul>
     <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
   </footer>
