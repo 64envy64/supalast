@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Начальная школа - AIS</title>
+        <meta property="og:title" content="Начальная школа - Aqbobek International School" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Начальная школа в международной школе Aqbobek International School"/>
+        <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="nachalnoezveno.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner"></div>
+            <div class="preloader-content">
+                <h2>Быть первым, иметь лучшее</h2>
+            </div>
+        </div> 
+        <header class="sub-header" id="stages">
+            <div class="logo-container">
+                <a href="../../index.html">
+                    <img src="../../images/logocolor.webp" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="phone">
+                <a href="tel:+77077506666" class="phone-link">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <span class="phone-number">+7 707 750 6666</span>
+                </a>
+            </div>
+            <div class="lang-dropdown">
+                <button class="lang-dropdown-btn">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span class="lang-name">ENG</span>
+                    <i class="fa-solid fa-angle-down lang-arrow"></i>
+                </button>
+                <div class="lang-dropdown-list">
+                    <a href="#" class="lang-dropdown-item">ENGLISH</a>
+                    <a href="starsheezveno.html" class="lang-dropdown-item">РУССКИЙ</a>
+                    <a href="starsheezvenokz.html" class="lang-dropdown-item">ҚАЗАҚША</a>
+                </div>
+            </div>
+          <div class="header-content">
+              <h1>Начальная школа<br>1-4 классы</h1>
+          </div>
+        </header>
+        <button class="navbar-burger" onclick="toggleMenu()"></button>
+        <div class="menu">
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn" style="animation-delay: 0.1s">О нас <i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="dropdown-content">
+                        <a href="../about.html">О AIS</a>
+                        <a href="../staffmain.html">Наша команда</a>
+                        <a href="../campus.html">О кампусе</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" style="animation-delay: 0.1s">Академические <i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="dropdown-content">
+                        <a href="nachalnoezveno.html">0-4 классы</a>
+                        <a href="sredneezveno.html">5-9 классы</a>
+                        <a href="starsheezveno.html">10-11 классы</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="dropdown-content">
+                        <a href="../stages.html">Этапы</a>
+                        <a href="#">Гранты</a>
+                    </div>
+                </div>
+                <a href="../../index.html#news" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
+                <a href="../../contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+                <div class="dropdown">
+                    <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="dropdown-content">
+                        <a href="../rules.html">Правила школы</a>
+                        <a href="../rules.html">Политика обработки личных данных</a>
+                        <a href="../documents.html">Документы</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <main class="content">
+          <div class="program-types">
+              <button class="program-type" data-tooltip="Сингапурская программа обучения">Сингапурская программа</button>
+              <button class="program-type" data-tooltip="Государственный общеобязательный стандарт образования">ГОСО</button>
+          </div>
+  
+          <div class="program-images">
+              <div class="program-image">
+                  <img src="../../sections/academics/images/nachalnoe2-desc.jpg" alt="Ученики в классе">
+              </div>
+              <div class="program-image">
+                  <img src="../../sections/academics/images/nachalnoe3-desc.png" alt="Фиолетовый фон">
+              </div>
+          </div>
+  
+          <section class="program-content">
+              <h2>Программа обучения</h2>
+              <p>Учебные методики Сингапура стали всемирно-известны благодаря своей ключевой роли в достижении лидирующих показателей Сингапурских школьников в различных международных исследованиях, таких как:</p>
+              <ul>
+                  <li>Trends in International Mathematics and Science Study (TIMSS) 1995-2019;</li>
+                  <li>Global competitiveness report (World Economic Forum) 2010-2019;</li>
+                  <li>Programme of International Student Assessment (PISA) 2009-2018;</li>
+                  <li>Progress in International Reading Literacy (PIRLS) 2001-2019.</li>
+              </ul>
+              <p>Мы внедряем международные серии, основанные на методиках обучения Сингапура по трем основным предметам: Английский язык, Математика, Наука</p>
+          </section>
+  
+          <section class="child-centered">
+              <div class="child-centered-content">
+                  <h2 class="animate-text">Ребенок - главный участник</h2>
+                  <p class="animate-text">Ребенок – это главный участник процесса обучения, и его интересы и мнение важны для нас. Ребенок – это член нашего общества, и у него есть право быть увиденным, услышанным, замеченным и понятым.</p>
+              </div>
+          </section>
+  
+          <section class="school-approach">
+              <div class="school-text">
+                  <p>Наша школа создает вдохновляющую и безопасную среду, где мы развиваем любознательность детей, поощряем их стремление к экспериментам и исследованиям, прививаем любовь к непрерывному обучению, ценим индивидуальность каждого ученика и ставим благополучие детей в центр всего, что мы делаем.</p>
+              </div>
+              <div class="school-image">
+                  <img src="../../sections/academics/images/nachalnoe4-desc.jpg" alt="Ученик играет в шахматы">
+              </div>
+          </section>
+      </main>
+
+        <section class="cta">
+            <h1>Получите качественное международное образование уже сейчас</h1>
+            <div class="background-img"></div>
+            <a href="https://instagram.com/ais_aqbobek">
+                <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+                        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                    </filter>
+                </defs>
+            </svg>
+        </section>
+        <br>
+
+        <!-- Back to top button -->
+        <a id="back-to-top"></a>
+
+        <footer class="footer">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
+                    <i class="fa-brands fa-instagram"></i>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
+                    <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
+                    <i class="fa-brands fa-google"></i>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
+                    <i class="fa-brands fa-youtube"></i>
+                    </a></li>
+            </ul>
+            <ul class="menufoot">
+                <li class="menu__item"><a class="menu__link" href="../../index.html">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="../about.html">О нас</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Родителям</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Гранты</a></li>
+                <li class="menu__item"><a class="menu__link" href="../../contact.html">Контакты</a></li>
+            </ul>
+            <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
+        </footer>
+
+        <script src="../../js/stages.js"></script>
+        <script src="../../js/bcktotoppreloader.js"></script>
+        <script defer src="../../js/language.js"></script>
+        <script src="../../js/scrollrevealelmnts.js" defer></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const animateTexts = document.querySelectorAll('.animate-text');
+                
+                animateTexts.forEach(text => {
+                    text.style.opacity = '1';
+                    text.innerHTML = text.textContent.replace(/\S/g, "<span class='letter' style='opacity: 0.5; display: inline-block;'>$&</span>").replace(/\s/g, " ");
+                });
+            
+                function animateOnScroll() {
+                    const triggerTop = window.innerHeight * 0.4; // Начало анимации на 40% высоты экрана
+                    const triggerBottom = window.innerHeight * 0.6; // Конец анимации на 60% высоты экрана
+            
+                    animateTexts.forEach(text => {
+                        if (text.dataset.animated === 'true') return;
+            
+                        const textRect = text.getBoundingClientRect();
+                        const textTop = textRect.top;
+                        const textBottom = textRect.bottom;
+            
+                        if (textTop < triggerBottom && textBottom > triggerTop) {
+                            const letters = text.querySelectorAll('.letter');
+                            const animationProgress = Math.max(0, Math.min(1, (triggerBottom - textTop) / (triggerBottom - triggerTop)));
+            
+                            letters.forEach((letter, index) => {
+                                const letterProgress = index / letters.length;
+                                if (letterProgress <= animationProgress) {
+                                    letter.style.opacity = '1';
+                                    letter.style.transition = 'opacity 0.1s ease';
+                                }
+                            });
+            
+                            if (animationProgress === 1) {
+                                text.dataset.animated = 'true';
+                            }
+                        }
+                    });
+                }
+            
+                window.addEventListener('scroll', animateOnScroll);
+                animateOnScroll();
+            });
+            </script>
+        <script>
+            const toggleMenu = () => {
+                const body = document.body;
+                body.classList.toggle("open");
+                
+                if (body.classList.contains("open")) {
+                    body.style.overflow = "hidden";
+                } else {
+                    body.style.overflow = "";
+                }
+            };
+
+            $(document).ready(function(){
+                $(".dropbtn").click(function(e){
+                    e.stopPropagation(); 
+                    $(".dropdown-content").hide(); 
+                    $(this).next(".dropdown-content").toggle(); 
+                    $(".dropbtn").css("opacity", "0.25"); 
+                    $(this).css("opacity", "1"); 
+                });
+
+                $(document).click(function(){
+                    $(".dropdown-content").hide();
+                    $(".dropbtn").css("opacity", "1");
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -32,7 +32,6 @@ border-radius: 50px;
 .no-resize {
 resize: none !important;
 }
-/* Стили для номера телефона */
 .phone {
   position: fixed;
   top: 65px;
@@ -60,7 +59,6 @@ resize: none !important;
   .lang-dropdown-btn .fa-earth-americas {
   display: none;
   }
-  /* Дополнительные стили для мобильных устройств */
   @media (max-width: 700px) {
   .header {
     min-height: 100vh;
@@ -91,7 +89,7 @@ resize: none !important;
   display: none;
   }
   .lang-dropdown-list {
-    width: 100px; /* Уменьшаем ширину для маленьких экранов */
+    width: 100px; 
     }
   }
   @media (max-width: 700px) {
@@ -326,7 +324,6 @@ transition: opacity 0.5s ease-out;
 opacity: 0;
 }
 
-/* Mobile responsiveness */
 @media only screen and (max-width: 600px) {
 .preloader h2 {
     font-size: 18px;
@@ -386,7 +383,7 @@ cursor: pointer;
 position: fixed;
 top: 60px;
 right: 20px;
-z-index: 1200;
+z-index: 1500;
 }
 
 .lang-dropdown-btn {
@@ -551,7 +548,7 @@ transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.2s backwards;
+  animation: appear 0.3s backwards;
   }
   
   @keyframes appear {
@@ -589,7 +586,6 @@ body.open .menu .dropbtn {
   z-index: 1501;
   font-size: 30px;
 }
-/* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
   font-family: "Steppe";
@@ -607,7 +603,7 @@ body.open .menu .dropbtn {
   background-color: transparent;
 }
 .dropdown .fa-chevron-right {
-  font-size: 15px;
+  font-size: 0.8rem;
   margin-left: 20px;
   transition: all 0.3s ease;
 }
@@ -626,17 +622,24 @@ body.open .menu .dropbtn {
     margin-left: -75px;
     padding: 10px 12px;
   }
+  .dropdown .fa-chevron-right {
+    font-size: 0.7rem;
+    margin-left: 15px;
+  }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 14px;
+    padding: 10px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
-    padding: 14px;
+    padding: 12px;
+  }
+  .dropdown .fa-chevron-right {
+    margin-left: 15px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
@@ -655,7 +658,7 @@ body.open .menu .dropbtn {
     place-items: flex start;
     justify-content: flex-start;
     width: 100%;
-    height: 100%; /* Сохраняет высоту */
+    height: 100%;
     background: rgba(0, 0, 0, 0.959);
     opacity: 0;
     overflow: hidden;

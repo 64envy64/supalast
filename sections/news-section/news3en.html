@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boarding Lyceum for the talented “Aqbobek Lyceum” - AIS</title>
+        <meta property="og:title" content="Opening of a boarding school for the talented - AIS" />
+        <meta property="og:type" content="website" />
+        <meta property="og:img" content="">
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Ознакомьтесь с новостью нашей школы подробнее кликнув по ссылке."/>
+        <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="news.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+      </head>
+    <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Preloader -->
+        <div class="preloader">
+          <div class="spinner"></div>
+          <div class="preloader-content">
+              <h2>Being first, having the best</h2>
+          </div>
+      </div> 
+    <section class="sub-header">
+      <div class="logo-container">
+        <a href="../../en.html">
+          <img src="../../images/logocolor.webp" alt="Logo" class="logo">
+        </a>
+      </div>
+      <div class="phone">
+        <a href="tel:+77077506666" class="phone-link">
+          <i class="fa-solid fa-phone-flip"></i>
+            <span class="phone-number">+7 707 750 6666</span>
+        </a>
+    </div>
+      <div class="lang-dropdown">
+        <button class="lang-dropdown-btn">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span class="lang-name">ENG</span>
+          <i class="fa-solid fa-angle-down lang-arrow"></i>
+        </button>
+        <div class="lang-dropdown-list">
+          <a href="#news3" onclick="lenis.scrollTo('#news3')" class="lang-dropdown-item">ENGLISH</a>
+          <a href="news3.html" class="lang-dropdown-item">РУССКИЙ</a>
+          <a href="news3kz.html" class="lang-dropdown-item">ҚАЗАҚША</a>
+        </div>
+      </div>
+    </section>
+    <button class="navbar-burger" onclick="toggleMenu()"></button>
+    <div class="menu">
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.1s">AIS <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../abouten.html">About us</a>
+            <a href="../staffmainen.html">Our team</a>
+            <a href="../campusen.html">Campus</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.2s">Admission <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../stagesen.html">Stages</a>
+            <a href="../grantsen.html">Grants</a>
+            <a href="#">Education fee</a>
+          </div>
+        </div>
+        <!--
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.2s">Academic <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Подменю 1</a>
+            <a href="#">Подменю 2</a>
+            <a href="#">Подменю 3</a>
+            <a href="#">Подменю 4</a>
+          </div>
+        </div>
+        -->
+        <a href="../../en.html#news" class="dropbtn" style="animation-delay: 0.4s">News</a>
+        <a href="../../contacten.html" class="dropbtn" style="animation-delay: 0.5s">Contacts</a>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.5s">Important <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../rulesen.html">Rules</a>
+            <a href="../rulesen.html">Policy of personal data processing</a>
+            <a href="../documentsen.html">Documents</a>  
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+       const body = document.body;
+       body.classList.toggle("open");
+
+      
+       if (body.classList.contains("open")) {
+      
+         body.style.overflow = "hidden";
+       } else {
+      
+         body.style.overflow = "";
+ }
+};
+    </script>
+<script>
+$(document).ready(function(){
+$(".dropbtn").click(function(e){
+  e.stopPropagation(); 
+  $(".dropdown-content").hide(); 
+  $(this).next(".dropdown-content").toggle(); 
+  $(".dropbtn").css("opacity", "0.25"); 
+  $(this).css("opacity", "1"); 
+});
+
+
+$(document).click(function(){
+  $(".dropdown-content").hide();
+  $(".dropbtn").css("opacity", "1");
+});
+});
+</script>
+
+<!-- news -->
+
+<section class="news-sections" id="news3">
+<article>
+  <figure class="banner-img">
+    <img src="../../news/lyceum.jpg" alt="AIS HACKATHON">
+    <figcaption class="img-date">18.04.24</figcaption>
+  </figure>
+  <div class="article-content">
+    <main class="article-body">
+      <h1>Opening of a new educational institution - “Aqbobek Lyceum”</h1>
+      <section>
+        <p>Dear Parents, After four years of successful operation of Aqbobek International School, we noticed a need for a specialized private school for talented children.</p>
+      </section>
+      <section>
+        <h2>How was it formed?</h2>
+        <p>After careful discussion of this issue, we decided to open a new educational institution - “Aqbobek Lyceum”, where talented children from all over the country will study.
+        </p>
+        <figure>
+          <img src="../../images/documents.jpg" alt="Art Wallpaper">
+          <figcaption>AIS</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>What's the Aqbobek Lyceum?</h2>
+        <p>“Aqbobek Lyceum is a boarding school for students in grades 7-10 with a focus on science and technology. A boarding school will be provided for non-resident students. Admission to the school will be competitive based on entrance exams in math and reading literacy.</p>
+        <figure>
+          <img src="../image/img4.jpg" alt="Art Wallpaper">
+          <figcaption>AIS</figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>We will be posting more information about the school and the admissions process soon.
+          The Aqbobek Lyceum will open its doors on September 1, 2024, and it may be your child who becomes part of the Aqbobek family
+        </p>
+      </section>
+    </main>
+    <aside class="article-actions">
+      <div class="wrapper-action">
+        <a class="button--flat" id="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="button--flat" id="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <p class="text--size-min hidden--mobile section--text">Share</p>
+        <a class="button--flat" id="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a class="button--flat" id="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <button class="button--flat" id="copylink"><i class="fas fa-link"></i></button>        
+        <p>
+      </div>
+    </aside>
+  </div>
+</article>
+</section>
+
+<section class="cta">
+  <h1>Get a quiality international education now</h1>
+  <div class="background-img"></div>
+  <a href="https://instagram.com/ais_aqbobek">
+  <button class="c-button c-button--gooey"> BECOME A PART OF AIS
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+</a>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
+<!-- Back to top button -->
+<a id="back-to-top"></a>
+
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
+        <i class="fa-brands fa-instagram"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
+        <i class="fa-brands fa-facebook"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
+        <i class="fa-brands fa-google"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
+        <i class="fa-brands fa-youtube"></i>
+        </a></li>
+    </ul>
+    <ul class="menufoot">
+      <li class="menu__item"><a class="menu__link" href="../../en.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="../abouten.html">About us</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Important</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Grants</a></li>
+      <li class="menu__item"><a class="menu__link" href="../../contacten.html">Contacts</a></li>
+    </ul>
+    <p>&copy; 2024 Aqbobek International School | All rights reserved</p>
+  </footer>
+<script src="../../js/share.js"></script>
+<script src="../../js/bcktotoppreloader.js"></script>
+<script defer src="../../js/language.js"></script>
+    </body>
+</html>

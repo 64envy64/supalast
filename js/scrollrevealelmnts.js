@@ -54,4 +54,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /* CAMPUS */
   ScrollReveal().reveal('.homes', { ...revealOptions, origin: 'bottom', distance: '20px', delay: 800 });
   ScrollReveal().reveal('.about', { ...revealOptions, origin: 'bottom', distance: '35px' });
+
+  
+  /*NACHALNOEZVENO */
+    ScrollReveal().reveal('.program-content', { ...revealOptions, origin: 'bottom', distance: '20px' });
+    ScrollReveal().reveal('.school-text', { ...revealOptions, opacity: 0 });
+    ScrollReveal().reveal('.school-image', { ...revealOptions, opacity: 0, delay: 200 });
 });
+

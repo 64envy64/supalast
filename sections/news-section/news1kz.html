@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="kk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>"Успешный 24-часовой IT хакатон" - AIS</title>
+        <meta property="og:title" content="Успешный 24-часовой IT-хакатон состоялся в нашей школе - AIS!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:img" content="">
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Ознакомьтесь с новостью нашей школы подробнее кликнув по ссылке."/>
+        <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="news.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+      </head>
+    <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Preloader -->
+        <div class="preloader">
+          <div class="spinner"></div>
+          <div class="preloader-content">
+              <h2>Быть первым, иметь лучшее</h2>
+          </div>
+      </div> 
+    <section class="sub-header">
+      <div class="logo-container">
+        <a href="../../index.html">
+          <img src="../../images/logocolor.webp" alt="Logo" class="logo">
+        </a>
+      </div>
+      <div class="phone">
+        <a href="tel:+77077506666" class="phone-link">
+          <i class="fa-solid fa-phone-flip"></i>
+            <span class="phone-number">+7 707 750 6666</span>
+        </a>
+    </div>
+      <div class="lang-dropdown">
+        <button class="lang-dropdown-btn">
+          <i class="fa-solid fa-earth-americas"></i>
+          <span class="lang-name">ҚАЗ</span>
+          <i class="fa-solid fa-angle-down lang-arrow"></i>
+        </button>
+        <div class="lang-dropdown-list">
+          <a href="#news1" onclick="lenis.scrollTo('#news1')" class="lang-dropdown-item">ҚАЗАҚША</a>
+          <a href="news1en.html" class="lang-dropdown-item">ENGLISH</a>
+          <a href="news1.html" class="lang-dropdown-item">РУССКИЙ</a>
+        </div>
+      </div>
+    </section>
+    <button class="navbar-burger" onclick="toggleMenu()"></button>
+    <div class="menu">
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.1s">О нас <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../about.html">О AIS</a>
+            <a href="../staffmain.html">Наша команда</a>
+            <a href="../campus.html">О кампусе</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../stages.html">Этапы</a>
+            <a href="#">Гранты</a>
+            <a href="#">Стоимость обучения</a>
+          </div>
+        </div>
+        <!--
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.2s">Академические <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Подменю 1</a>
+            <a href="#">Подменю 2</a>
+            <a href="#">Подменю 3</a>
+            <a href="#">Подменю 4</a>
+          </div>
+        </div>
+        -->
+        <a href="../../index.html#news" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
+        <a href="../../contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+        <div class="dropdown">
+          <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
+          <div class="dropdown-content">
+            <a href="../rules.html">Правила школы</a>
+            <a href="../rules.html">Политика обработки личных данных</a>
+            <a href="../documents.html">Документы</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+       const body = document.body;
+       body.classList.toggle("open");
+
+      
+       if (body.classList.contains("open")) {
+      
+         body.style.overflow = "hidden";
+       } else {
+      
+         body.style.overflow = "";
+ }
+};
+    </script>
+<script>
+$(document).ready(function(){
+$(".dropbtn").click(function(e){
+  e.stopPropagation(); 
+  $(".dropdown-content").hide(); 
+  $(this).next(".dropdown-content").toggle(); 
+  $(".dropbtn").css("opacity", "0.25"); 
+  $(this).css("opacity", "1"); 
+});
+
+
+$(document).click(function(){
+  $(".dropdown-content").hide();
+  $(".dropbtn").css("opacity", "1");
+});
+});
+</script>
+
+<!-- stages -->
+
+<section class="news-sections" id="news1">
+<article>
+  <figure class="banner-img">
+    <img src="../../news/post-img/PHOTO AIS HACKATHON (3).jpg" alt="AIS HACKATHON">
+    <figcaption class="img-date">03.03.24</figcaption>
+  </figure>
+  <div class="article-content">
+    <main class="article-body">
+      <h1>Успешный Хакатон в Aqbobek International School: AISHack ‘24</h1>
+      <section>
+        <p>На протяжении 24 часов, с 17 по 18 февраля 2024 года, Aqbobek International School стала эпицентром творчества и инноваций, принимая в своих стенах одно из самых захватывающих событий в мире технологий - хакатон.</p>
+        <p>Это мероприятие, объединяющее молодых программистов, дизайнеров и технических гуру, создало уникальную площадку для развития навыков и творческого мышления учащихся.</p>
+      </section>
+      <section>
+        <h2>Не просто "хакатон"</h2>
+        <p>Хакатон, организованный на базе Aqbobek International School, протекал в формате непрерывного 24-часового марафона, во время которого участники преодолевали технические препятствия, искали новаторские решения и воплощали их в жизнь.
+          Участники, объединенные в команды по 2-4 человека, приступили к работе над своими проектами с энтузиазмом и решимостью. В течение это времени школьные коридоры наполнились звуками кода, дискуссий и творческих идей, а воздух пропитался атмосферой соревнования и взаимопомощи.
+        </p>
+        <figure>
+          <img src="../../news/post-img/PHOTO AIS HACKATHON (1).jpg" alt="Art">
+          <figcaption>Рабочие моменты</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Лучшее для лучших</h2>
+        <p>Мероприятие привлекло более 60 учеников из 18 школ города Актобе, представляющих разнообразные таланты и креативные способности
+          Техническое задание на хакатон было ясным и вызывающим: создать игру на базе языка программирования Python с казахской идентичностью.
+          Это требование стимулировало участников к творческому подходу и поиску вдохновения в богатой культуре и традициях Казахстана</p>
+        <figure>
+          <img src="../../news/post-img/PHOTO AIS HACKATHON (2).jpg" alt="Art">
+          <figcaption>Обзор судей</figcaption>
+        </figure>
+      </section>
+      <section>
+        <p>После напряженного срока разработки настало время презентаций. Каждая команда продемонстрировала свою игру и объяснила ее концепцию и особенности. Оценивались не только технические навыки, но и оригинальность и креативность идеи, а также ее соответствие казахской культуре и традициям
+          После внимательного рассмотрения и обсуждения жюри определило победителей.</p>
+      </section>
+    </main>
+    <aside class="article-actions">
+      <div class="wrapper-action">
+        <a class="button--flat" id="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="button--flat" id="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <p class="text--size-min hidden--mobile section--text">Поделиться</p>
+        <a class="button--flat" id="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a class="button--flat" id="telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <button class="button--flat" id="copylink"><i class="fas fa-link"></i></button>        
+        <p>
+      </div>
+    </aside>
+  </div>
+</article>
+</section>
+
+<section class="cta">
+  <h1>Получите качественное международное образование уже сейчас</h1>
+  <div class="background-img"></div>
+  <a href="https://instagram.com/ais_aqbobek">
+  <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+</a>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
+<!-- Back to top button -->
+<a id="back-to-top"></a>
+
+<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
+        <i class="fa-brands fa-instagram"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
+        <i class="fa-brands fa-facebook"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
+        <i class="fa-brands fa-google"></i>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
+        <i class="fa-brands fa-youtube"></i>
+        </a></li>
+    </ul>
+    <ul class="menufoot">
+      <li class="menu__item"><a class="menu__link" href="../../index.html">Главная</a></li>
+      <li class="menu__item"><a class="menu__link" href="../about.html">О нас</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Родителям</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Гранты</a></li>
+      <li class="menu__item"><a class="menu__link" href="../../contact.html">Контакты</a></li>
+    </ul>
+    <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
+  </footer>
+<script src="../../js/share.js"></script>
+<script src="../../js/bcktotoppreloader.js"></script>
+<script defer src="../../js/language.js"></script>
+    </body>
+</html>

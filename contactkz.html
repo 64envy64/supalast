@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="kk">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Akbobek International School - школа больших возможностей</title>
-        <meta property="og:title" content="Контакты - Akbobek International School" />
+        <title>Aqbobek International School - контакты школы</title>
+        <meta property="og:title" content="Контакты - Aqbobek International School" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content=""/>
         <meta property="og:description" content="Контакты и местоположение школы"/>
-        <link rel="icon" type="image/png" href="images/title.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="contact.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.css" integrity="sha512-FbCB35B2LfIq25LLPlR+pWejoW1X5uXXZ3XdjiXVtixww/x7KA7k2jZiUIWC+n9qetLeOgCyyR+UKhwLbZLmaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     </head>
     <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -27,7 +29,7 @@
               <h2>Быть первым, иметь лучшее</h2>
           </div>
       </div> 
-    <section class="sub-header">
+    <section class="sub-header" id="contacts">
       <div class="logo-container">
         <a href="index.html">
           <img src="images/logocolor.webp" alt="Logo" class="logo">
@@ -42,13 +44,13 @@
       <div class="lang-dropdown">
         <button class="lang-dropdown-btn">
           <i class="fa-solid fa-earth-americas"></i>
-          <span class="lang-name">РУС</span>
+          <span class="lang-name">ҚАЗ</span>
           <i class="fa-solid fa-angle-down lang-arrow"></i>
         </button>
         <div class="lang-dropdown-list">
-          <a href="#" class="lang-dropdown-item">РУССКИЙ</a>
-          <a href="en.html" class="lang-dropdown-item">ENGLISH</a>
-          <a href="kz.html" class="lang-dropdown-item">ҚАЗАҚША</a>
+          <a href="#contacts" onclick="lenis.scrollTo('#contacts')" class="lang-dropdown-item">ҚАЗАҚША</a>
+          <a href="contacten.html" class="lang-dropdown-item">ENGLISH</a>
+          <a href="contact.html" class="lang-dropdown-item">РУССКИЙ</a>
         </div>
       </div>
       <h1>Контакты</h1>
@@ -61,37 +63,36 @@
           <div class="dropdown-content">
             <a href="sections/about.html">О AIS</a>
             <a href="sections/staffmain.html">Наша команда</a>
-            <a href="#">О кампусе</a>
-            <a href="#">Внутренняя инфраструктура</a>
+            <a href="sections/campus.html">О кампусе</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Анкета</a>
+            <a href="/sections/stages.html">Этапы</a>
             <a href="#">Гранты</a>
             <a href="#">Стоимость обучения</a>
-            <a href="#">Подменю 4</a>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn" style="animation-delay: 0.2s">Поступление <i class="fa-solid fa-chevron-right"></i></button>
-          <div class="dropdown-content">
-            <a href="#">Подменю 1</a>
-            <a href="#">Подменю 2</a>
-            <a href="#">Подменю 3</a>
-            <a href="#">Подменю 4</a>
+          <!--
+          <div class="dropdown">
+            <button class="dropbtn" style="animation-delay: 0.2s">Академические <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Soon</a>
+              <a href="#">Soon</a>
+              <a href="#">Soon</a>
+              <a href="#">Soon</a>
+            </div>
           </div>
-        </div>
-        <a href="#" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
-        <a href="contact.html" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
+          -->
+        <a href="index.html#news" class="dropbtn" style="animation-delay: 0.4s">Новости</a>
+        <a href="#contacts" onclick="lenis.scrollTo('#contacts')" class="dropbtn" style="animation-delay: 0.5s">Контакты</a>
         <div class="dropdown">
           <button class="dropbtn" style="animation-delay: 0.5s">Родителям <i class="fa-solid fa-chevron-right"></i></button>
           <div class="dropdown-content">
-            <a href="#">Правила школы</a>
-            <a href="#">Политика обработки личных данных</a>
-            <a href="#">Подменю 3</a>
-            <a href="#">Подменю 4</a>
+            <a href="sections/rules.html">Правила школы</a>
+            <a href="sections/rules.html">Политика обработки личных данных</a>
+            <a href="sections/documents.html">Документы</a>
           </div>
         </div>
       </nav>
@@ -101,12 +102,12 @@
        const body = document.body;
        body.classList.toggle("open");
 
-       // Проверка, открыто ли меню
+       
        if (body.classList.contains("open")) {
-       // Заблокировать прокрутку страницы
+       
          body.style.overflow = "hidden";
        } else {
-       // Разблокировать прокрутку страницы
+       
          body.style.overflow = "";
  }
 };
@@ -114,14 +115,14 @@
 <script>
 $(document).ready(function(){
 $(".dropbtn").click(function(e){
-  e.stopPropagation(); // Остановить всплытие события
-  $(".dropdown-content").hide(); // Скрыть все другие выпадающие меню
-  $(this).next(".dropdown-content").toggle(); // Переключить видимость текущего выпадающего меню
-  $(".dropbtn").css("opacity", "0.25"); // Сделать все кнопки полупрозрачными
-  $(this).css("opacity", "1"); // Сделать текущую кнопку полностью видимой
+  e.stopPropagation(); 
+  $(".dropdown-content").hide(); 
+  $(this).next(".dropdown-content").toggle(); 
+  $(".dropbtn").css("opacity", "0.25"); 
+  $(this).css("opacity", "1"); 
 });
 
-// Скрыть выпадающее меню и восстановить opacity всех кнопок при клике вне его
+
 $(document).click(function(){
   $(".dropdown-content").hide();
   $(".dropbtn").css("opacity", "1");
@@ -141,14 +142,14 @@ $(document).click(function(){
       <div>
         <i class="fa fa-home"></i>
         <span>
-          <h5>Ораза-Татеулы 13А</h5>
+          <h5><strong style="color: #100629;">Ораза-Татеулы 13А</strong></h5>
           <p>Казахстан, Актобе KZ</p>
         </span>
     </div>
     <div>
       <i class="fa fa-phone"></i>
       <span>
-        <h5>+7 707 750 6666</h5>
+        <h5><strong style="color: #100629;">+7 707 750 6666</strong></h5>
         <p>Понедельник - Пятница<br>
            09:00 по 18:00</p>
       </span>
@@ -156,7 +157,7 @@ $(document).click(function(){
     <div>
       <i class="fa fa-envelope-o"></i>
       <span>
-        <h5>info@akbobek.kz</h5>
+        <h5><strong style="color: #100629;">info@akbobek.kz</strong></h5>
         <p>Почта школы</p>
       </span>
     </div>
@@ -169,9 +170,52 @@ $(document).click(function(){
       <div class="contact-col">
         <h1>Связаться с нами</h1>
         <p>Ответим в любое время с 09:00 по 18:00 в будние дни.<br>Для того чтобы написать лично - нажмите на кнопку ниже</p>
-          <a href="" class="hero-btn">НАПИСАТЬ НАМ</a>
+        <a href="https://instagram.com/ais_aqbobek/">
+          <button class="c-button c-button--gooey"> НАПИСАТЬ НАМ
+            <div class="c-button__blobs">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+              <feBlend in="SourceGraphic" in2="goo"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+        </div>
       </div>
  </section>
+
+ <section class="cta">
+  <h1>Получите качественное международное образование уже сейчас</h1>
+  <div class="background-img"></div>
+  <a href="https://instagram.com/ais_aqbobek/">
+    <button class="c-button c-button--gooey"> ПОСТУПИТЬ В ШКОЛУ
+      <div class="c-button__blobs">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </button>
+  </a>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</section>
+<br>
+
 <!-- Back to top button -->
 <a id="back-to-top"></a>
 
@@ -184,30 +228,28 @@ $(document).click(function(){
     </div>
     <ul class="social-icon">
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ais_aqbobek/">
-          <ion-icon name="logo-instagram"></ion-icon>
+        <i class="fa-brands fa-instagram"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/ais.aqbobek/">
-          <ion-icon name="logo-facebook"></ion-icon>
+        <i class="fa-brands fa-facebook"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://drive.google.com/drive/folders/1BNYBwF-QG-oZWMoh3SlneF3JmntUZdln">
-          <ion-icon name="logo-google"></ion-icon>
+        <i class="fa-brands fa-google"></i>
         </a></li>
       <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@aqbobekinternationalschool4454">
-          <ion-icon name="logo-youtube"></ion-icon>
+        <i class="fa-brands fa-youtube"></i>
         </a></li>
     </ul>
     <ul class="menufoot">
-      <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+      <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
       <li class="menu__item"><a class="menu__link" href="sections/about.html">О нас</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Родителям</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Гранты</a></li>
-      <li class="menu__item"><a class="menu__link" href="contact.html">Контакты</a></li>
+      <li class="menu__item"><a class="menu__link" href="#" onclick="lenis.scrollTo('#contacts')">Контакты</a></li>
     </ul>
-    <p>&copy; 2024 Akbobek International School | Все права защищены</p>
+    <p>&copy; 2024 Aqbobek International School | Все права защищены</p>
   </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="assets/bcktotoppreloader.js"></script>
-<script defer src="assets/language.js"></script>
+<script src="js/bcktotoppreloader.js"></script>
+<script defer src="js/language.js"></script>
     </body>
 </html>

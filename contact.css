@@ -22,63 +22,70 @@ border-radius: 50px;
 .no-resize {
 resize: none !important;
 }
-/* Стили для номера телефона */
 .phone {
-position: fixed;
-top: 65px;
-right: 6.6em;
-display: flex;
-align-items: center;
-z-index: 1200;
-}
-.phone-link {
-display: flex;
-align-items: center;
-color: #9e9e9e; /* Замените на ваш цвет текста */
-text-decoration: none;
-margin-right: 20px; /* Расстояние между номером и переменной языка */
-transition: color 0.5s ease;
-}
-
-.phone-link:hover {
-color: #e4e4e4; /* Замените на ваш цвет при наведении */
-}
-
-.phone .fa-phone-flip {
-margin-right: 10px; /* Расстояние между иконкой телефона и номером */
-font-size: 20px;
-}
-.lang-dropdown-btn .fa-earth-americas {
-display: none;
-}
-/* Дополнительные стили для мобильных устройств */
-@media (max-width: 768px) {
-.phone {
-    margin-right: -50px;
-}
-.phone-number {
+  position: fixed;
+  top: 65px;
+  right: 6.6em;
+  display: flex;
+  align-items: center;
+  z-index: 1501;
+  }
+  .phone-link {
+  display: flex;
+  align-items: center;
+  color: #9e9e9e; 
+  text-decoration: none;
+  margin-right: 20px; 
+  transition: color 0.5s ease;
+  }
+  .phone-link:hover {
+  color: #e4e4e4; 
+  }
+  
+  .phone .fa-phone-flip {
+  margin-right: 10px; 
+  font-size: 20px;
+  }
+  .lang-dropdown-btn .fa-earth-americas {
   display: none;
-}
-.lang-dropdown-btn .fa-earth-americas {
+  }
+
+  @media (max-width: 700px) {
+  .header {
+    min-height: 100vh;
+  }
+  .phone {
+    right: 2.5em;
+  }
+  .phone-number {
+  display: none;
+  }
+  .lang-dropdown {
+  right: 1em;
+  }
+  .lang-dropdown-btn .fa-earth-americas {
   display: flex;
   color: #9e9e9e;
   transition: color 0.5s ease;
   font-size: 20px;
-}
-.lang-dropdown-btn .fa-earth-americas:hover {
+  }
+  .lang-dropdown-btn .fa-earth-americas:hover {
   display: flex;
   color: #e4e4e4;
-}
-.lang-dropdown-btn .lang-arrow {
+  }
+  .lang-dropdown-btn .lang-arrow {
   display: none;
-}
-.lang-name {
+  }
+  .lang-name {
   display: none;
-}
-}
+  }
+  .lang-dropdown-list {
+    width: 100px; 
+    }
+  }
 @media (max-width: 700px) {
 .lang-dropdown-list {
-  width: 100px; /* Уменьшаем ширину для маленьких экранов */
+  width: 100px; 
 }
 }
 @media (max-width: 700px) {
@@ -182,9 +189,9 @@ left: 0;
 width: 100%;
 height: 25%;
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87) 0%, rgba(0, 0, 0, 0) 100%);
-pointer-events: none; /* Позволяет кликать через этот элемент */
+pointer-events: none; 
 z-index: 1000;
-resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
+resize: horizontal;
 }
 @media (max-width: 768px) {
 body::before {
@@ -315,7 +322,7 @@ transform: rotate(180deg);
 .preloader-content {
 text-align: center;
 opacity: 1;
-transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Added visibility transition */
+transition: opacity 1s ease-in-out, visibility 1s ease-in-out; 
 animation: fadeIn 1s ease-in-out;
 }
 
@@ -340,15 +347,14 @@ transition: opacity 0.5s ease-out;
 opacity: 0;
 }
 
-/* Mobile responsiveness */
 @media only screen and (max-width: 600px) {
 .preloader h2 {
     font-size: 18px;
 }
 
 .preloader {
-    align-items: center; /* Align to the start on mobile */
-    text-align: center; /* Align text to the left on mobile */
+    align-items: center;
+    text-align: center; 
 }
 }
 .sub-header {
@@ -376,8 +382,8 @@ color: #fff;
 .logo-container {
   position: fixed;
   top: 1%;
-  left: 50%; /* Расположение по центру */
-  transform: translateX(-50%); /* Центрирование логотипа */
+  left: 50%; 
+  transform: translateX(-50%);
   z-index: 1501;
 }
 .sub-header .logo {
@@ -474,7 +480,7 @@ cursor: pointer;
 position: fixed;
 top: 60px;
 right: 20px;
-z-index: 1200;
+z-index: 1500;
 }
 
 .lang-dropdown-btn {
@@ -639,7 +645,7 @@ transform: scaleX(0.9);
 }
 
 body.open .menu .dropbtn {
-  animation: appear 0.2s backwards;
+  animation: appear 0.3s backwards;
   }
   
   @keyframes appear {
@@ -677,7 +683,6 @@ body.open .menu .dropbtn {
   z-index: 1501;
   font-size: 30px;
 }
-/* Добавьте стили для кнопки */
 .dropbtn {
   position: relative;
   font-family: "Steppe";
@@ -695,7 +700,7 @@ body.open .menu .dropbtn {
   background-color: transparent;
 }
 .dropdown .fa-chevron-right {
-  font-size: 15px;
+  font-size: 0.8rem;
   margin-left: 20px;
   transition: all 0.3s ease;
 }
@@ -714,17 +719,24 @@ body.open .menu .dropbtn {
     margin-left: -75px;
     padding: 10px 12px;
   }
+  .dropdown .fa-chevron-right {
+    font-size: 0.7rem;
+    margin-left: 15px;
+  }
 }
 @media (min-width: 401px) and (max-width: 700px) {
   .dropdown-content a {
     font-size: 20px;
     margin-left: -30px;
-    padding: 12px 14px;
+    padding: 10px 14px;
   }
   .dropbtn {
     font-size: 22px;
     margin-left: 20px;
-    padding: 14px;
+    padding: 12px;
+  }
+  .dropdown .fa-chevron-right {
+    margin-left: 15px;
   }
 }
 @media screen and (min-width: 701px) and (max-width: 1200px) {
@@ -743,7 +755,7 @@ body.open .menu .dropbtn {
     place-items: flex start;
     justify-content: flex-start;
     width: 100%;
-    height: 100%; /* Сохраняет высоту */
+    height: 100%;
     background: rgba(0, 0, 0, 0.959);
     opacity: 0;
     overflow: hidden;
@@ -854,7 +866,7 @@ body.open .menu .dropbtn {
   padding: 15px 0 25px;
   color: #696969;
 }
-/* Стили для маленьких экранов (мобильных устройств) */
+
 @media screen and (max-width: 768px) {
   .contact-us {
     width: 100%; 

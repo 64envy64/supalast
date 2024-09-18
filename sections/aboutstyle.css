@@ -25,7 +25,6 @@ border-radius: 50px;
 .no-resize {
 resize: none !important;
 }
-/* Стили для номера телефона */
 .phone {
   position: fixed;
   top: 65px;
@@ -53,7 +52,6 @@ resize: none !important;
   .lang-dropdown-btn .fa-earth-americas {
   display: none;
   }
-  /* Дополнительные стили для мобильных устройств */
   @media (max-width: 700px) {
   .header {
     min-height: 100vh;
@@ -526,7 +524,7 @@ cursor: pointer;
   }
   
   body.open .menu .dropbtn {
-    animation: appear 0.2s backwards;
+    animation: appear 0.3s backwards;
     }
     
     @keyframes appear {
@@ -564,6 +562,7 @@ cursor: pointer;
     z-index: 1501;
     font-size: 30px;
   }
+  /* Добавьте стили для кнопки */
   .dropbtn {
     position: relative;
     font-family: "Steppe";
@@ -581,7 +580,7 @@ cursor: pointer;
     background-color: transparent;
   }
   .dropdown .fa-chevron-right {
-    font-size: 15px;
+    font-size: 0.8rem;
     margin-left: 20px;
     transition: all 0.3s ease;
   }
@@ -600,17 +599,24 @@ cursor: pointer;
       margin-left: -75px;
       padding: 10px 12px;
     }
+    .dropdown .fa-chevron-right {
+      font-size: 0.7rem;
+      margin-left: 15px;
+    }
   }
   @media (min-width: 401px) and (max-width: 700px) {
     .dropdown-content a {
       font-size: 20px;
       margin-left: -30px;
-      padding: 12px 14px;
+      padding: 10px 14px;
     }
     .dropbtn {
       font-size: 22px;
       margin-left: 20px;
-      padding: 14px;
+      padding: 12px;
+    }
+    .dropdown .fa-chevron-right {
+      margin-left: 15px;
     }
   }
   @media screen and (min-width: 701px) and (max-width: 1200px) {
@@ -629,7 +635,7 @@ cursor: pointer;
       place-items: flex start;
       justify-content: flex-start;
       width: 100%;
-      height: 100%; /* Сохраняет высоту */
+      height: 100%; 
       background: rgba(0, 0, 0, 0.959);
       opacity: 0;
       overflow: hidden;
@@ -714,7 +720,6 @@ cursor: pointer;
   pointer-events: auto;
 }
 
-/* Применяем стили к каждому тултипу */
 .tooltip-item:hover + .tooltip {
    opacity: 1;
    pointer-events: auto;
@@ -809,7 +814,6 @@ cursor: pointer;
 .facilities li:last-child {
   margin-right: 0;
 }
-/* Медиа-запросы для адаптации под различные экраны */
 @media only screen and (max-width: 768px) {
   .facilities {
     flex-wrap: wrap; 
@@ -1157,11 +1161,11 @@ a {
 
   .about-col {
     width: 100%;
-    margin-right: 0; /* Remove right margin on mobile */
+    margin-right: 0; 
   }
 
   .about-col img {
-    margin-left: 0; /* Reset margin for image on mobile */
+    margin-left: 0; 
   }
   .about-col h1 {
     font-size: 40px;
